@@ -11,6 +11,7 @@
     align-items:center;
     padding:0 30px;
     box-sizing:border-box;
+    z-index:1000;
 }
 
 /* ロゴ */
@@ -42,7 +43,7 @@
     text-align: center;
     font-family: sans-serif;
     margin:0;
-    padding-top:90px;
+    padding-top:120px;
 }
 
 h1{
@@ -56,7 +57,7 @@ p{
 @media (max-width:768px){
 
 body{
-padding-top:110px;
+padding-top:120px;
 }
 
 }
