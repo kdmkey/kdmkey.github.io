@@ -21,16 +21,17 @@
     
     /* スクロール後 */
     .header.scrolled{
-    background: rgba(229,229,229,0.6);
+    background: rgba(229,229,229,0);/* ヘッダー透明度 */
     backdrop-filter: blur(10px);
     }
     
     /* ロゴ */
     .logo{
-    font-size:18px;
+    font-family: "digibop", sans-serif;
+    font-size:22px;
     letter-spacing:2px;
     font-weight:500;
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
     }
     
     /* ハンバーガー */
