@@ -153,6 +153,14 @@
     width:26px;
     height:18px;
     }
+    /* ☰ → × 調整 */
+    .hamburger.active span:nth-child(1){
+    transform:translateY(7.5px) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(3){
+    transform:translateY(-7.5px) rotate(-45deg);
+    }
     
     /* メニュー */
     .menu{
