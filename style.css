@@ -1,5 +1,5 @@
 body{
-    background: black;
+    background: rgb(255, 255, 255);
     color: white;
     text-align: center;
     font-family: sans-serif;
@@ -7,31 +7,4 @@ body{
 
 h1{
     font-size: 50px;
-}
-/* ヘッダー */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background:#ffffff;
-}
-
-/* ロゴ */
-.logo{
-    font-size:24px;
-    letter-spacing:2px;
-}
-
-/* ナビ */
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
-}
-
-nav a{
-    text-decoration:none;
-    color:black;
-    font-size:14px;
 }
