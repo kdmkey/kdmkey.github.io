@@ -29,6 +29,7 @@
     flex-direction:column;
     justify-content:space-between;
     cursor:pointer;
+    color: white;
 }
 
 .hamburger span{
@@ -53,7 +54,8 @@ h1{
 p{
     color:black;
     }
-    
+
+/* スマホ用 */
 @media (max-width:768px){
 
 body{
