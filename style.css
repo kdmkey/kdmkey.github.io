@@ -41,12 +41,11 @@
     color: white;
     text-align: center;
     font-family: sans-serif;
+    margin:0;
+    padding-top:70px;
 }
 
 h1{
     font-size: 50px;
-    color: rgb(0, 0, 0);
-}
-p{
     color: rgb(0, 0, 0);
 }
