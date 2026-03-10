@@ -205,10 +205,13 @@
     }
     
     form{
-    margin:20px auto;
-    gap:16px;
-    padding:0 20px;
-    }
+        max-width:500px;
+        margin:20px auto;
+        display:flex;
+        flex-direction:column;
+        gap:16px;
+        padding:0 20px;
+        }
     
     input,
     select,
