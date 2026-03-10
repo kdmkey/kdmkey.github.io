@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function(){
+    window.addEventListener("scroll", function(){
 
     const header = document.querySelector(".header");
     
@@ -10,7 +10,7 @@ window.addEventListener("scroll", function(){
     
     });
 
-    /* ハンバーガーメニュー機能 */
+    /* ハンバーガー */
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("menu");
     const links = document.querySelectorAll(".menu a");
