@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://use.typekit.net/vuu2hxk.css">
+<link rel="stylesheet" href="style.css">
+
+<title>ORDER FORM</title>
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">YUTO KODAMA</div>
+
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</header>
+
+<!-- メニュー -->
+<nav class="menu" id="menu">
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="order.html">ORDER FORM</a></li>
+<li><a href="archive.html">ARCHIVE</a></li>
+<li><a href="mailto:yutokodamakdm@gmail.com">CONTACT</a></li>
+</ul>
+</nav>
+
+<h1>ORDER FORM</h1>
+
+<form action="https://formspree.io/f/xqeypekn" method="POST">
+
+<label>NAME</label>
+<input type="text" name="name" required>
+
+<label>EMAIL</label>
+<input type="email" name="email" required>
+
+<label>INSTAGRAM</label>
+<input type="text" name="instagram">
+
+<label>ORDER DETAIL</label>
+<textarea name="order" required></textarea>
+
+<button type="submit">SEND</button>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
