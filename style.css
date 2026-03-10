@@ -196,27 +196,31 @@
         cursor:pointer;
         }
 
-        /* オーダーフォーム　スマホ用 */
-        @media (max-width:768px){
+/* オーダーフォーム　スマホ用 */
+@media (max-width:768px){
 
-            h1{
-            font-size:22px;
-            text-align:center;
-            }
-            
-            form{
-            margin:20px auto;
-            gap:16px;
-            }
-            
-            input,
-            select,
-            textarea{
-            font-size:16px;
-            }
-            
-            button{
-            padding:14px;
-            }
-            
-            }
+    h1{
+    font-size:22px;
+    text-align:center;
+    }
+    
+    form{
+    margin:20px auto;
+    gap:16px;
+    padding:0 20px;
+    }
+    
+    input,
+    select,
+    textarea{
+    width:100%;
+    font-size:16px;
+    box-sizing:border-box;
+    }
+    
+    button{
+    padding:14px;
+    width:100%;
+    }
+    
+    }
