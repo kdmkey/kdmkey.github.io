@@ -41,20 +41,44 @@
 <label>NAME</label>
 <input type="text" name="name" required>
 
+<label>PHONE</label>
+<input type="tel" name="phone">
+
 <label>EMAIL</label>
 <input type="email" name="email" required>
 
-<label>INSTAGRAM</label>
-<input type="text" name="instagram">
+<label>制作内容</label>
+<select name="service" required>
+<option value="">選択してください</option>
+<option value="ホームページ制作">ホームページ制作</option>
+<option value="ECサイトデザインカスタム">ECサイトデザインカスタム</option>
+<option value="デザイン">デザイン</option>
+<option value="その他">その他</option>
+</select>
 
-<label>ORDER DETAIL</label>
-<textarea name="order" required></textarea>
+<label>制作内容（その他の場合）</label>
+<input type="text" name="service_other">
+
+<label>希望納期</label>
+<select name="deadline" required>
+<option value="">選択してください</option>
+<option value="〜1ヶ月">〜1ヶ月</option>
+<option value="1ヶ月〜2ヶ月">1ヶ月〜2ヶ月</option>
+<option value="〜3ヶ月">〜3ヶ月</option>
+<option value="その他">その他</option>
+</select>
+
+<label>希望納期（その他の場合）</label>
+<input type="text" name="deadline_other">
+
+<label>ご予算</label>
+<input type="text" name="budget" placeholder="例：10万円前後">
+
+<label>その他</label>
+<textarea name="message"></textarea>
 
 <button type="submit">SEND</button>
 
 </form>
 
 <script src="script.js"></script>
-
-</body>
-</html>
