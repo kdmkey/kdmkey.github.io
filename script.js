@@ -48,25 +48,3 @@
     menu.addEventListener("click", function(e){
     e.stopPropagation();
     });
-
-    const service = document.getElementById("service");
-    const serviceOther = document.getElementById("service_other_box");
-    
-    service.addEventListener("change", () => {
-    if(service.value === "other"){
-    serviceOther.style.display = "block";
-    }else{
-    serviceOther.style.display = "none";
-    }
-    });
-    
-    const deadline = document.getElementById("deadline");
-    const deadlineOther = document.getElementById("deadline_other_box");
-    
-    deadline.addEventListener("change", () => {
-    if(deadline.value === "other"){
-    deadlineOther.style.display = "block";
-    }else{
-    deadlineOther.style.display = "none";
-    }
-    });

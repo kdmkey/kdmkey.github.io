@@ -172,6 +172,7 @@
     font-size:18px;
     }
     
+    /* オーダーフォーム */
     }
     form{
         max-width:500px;
@@ -194,3 +195,28 @@
         border:none;
         cursor:pointer;
         }
+
+        /* オーダーフォーム　スマホ用 */
+        @media (max-width:768px){
+
+            h1{
+            font-size:22px;
+            text-align:center;
+            }
+            
+            form{
+            margin:40px auto;
+            gap:16px;
+            }
+            
+            input,
+            select,
+            textarea{
+            font-size:16px;
+            }
+            
+            button{
+            padding:14px;
+            }
+            
+            }
