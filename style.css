@@ -1,5 +1,5 @@
 /* ヘッダー */
-    .header{
+.header{
     position:fixed;
     top:0;
     left:0;
@@ -111,7 +111,7 @@
     }
     
     .menu a{
-    color:rgb(0, 0, 0);
+    color:rgb(0,0,0);
     text-decoration:none;
     font-size:20px;
     letter-spacing:2px;
@@ -127,54 +127,9 @@
     padding-top:120px;
     }
     
-/* スマホ */
-@media (max-width:768px){
-
-    .header{
-    height:60px;
-    padding:0 20px;
-    }
+    /* オーダーフォーム */
     
-    .logo{
-    font-size:24px;
-    }
-    
-    /* ハンバーガー */
-    .hamburger{
-    width:26px;
-    height:18px;
-    }
-    /* ☰ → × 調整 */
-    .hamburger.active span:nth-child(1){
-    transform:translateY(7.5px) rotate(45deg);
-    }
-    .hamburger.active span:nth-child(2){
-    opacity:0;
-    transform:scaleX(0);
-    }
-    .hamburger.active span:nth-child(3){
-    transform:translateY(-7.5px) rotate(-45deg);
-    }
-    
-    /* メニュー */
-    .menu{
-    width:200px;
-    right:-200px;
-    box-shadow:none;
-    }
-    
-    /* メニュー表示 */
-    .menu.active{
-    right:0;
-    }
-    
-    .menu a{
-    font-size:18px;
-    }
-    
-/* オーダーフォーム */
-
-form{
+    form{
     max-width:500px;
     margin:40px auto;
     display:flex;
@@ -200,9 +155,54 @@ form{
     width:100%;
     }
     
-    /* オーダーフォーム　スマホ用 */
-    
+    /* スマホ */
     @media (max-width:768px){
+    
+    .header{
+    height:60px;
+    padding:0 20px;
+    }
+    
+    .logo{
+    font-size:24px;
+    }
+    
+    /* ハンバーガー */
+    .hamburger{
+    width:26px;
+    height:18px;
+    }
+    
+    /* ☰ → × 調整 */
+    .hamburger.active span:nth-child(1){
+    transform:translateY(7.5px) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(2){
+    opacity:0;
+    transform:scaleX(0);
+    }
+    
+    .hamburger.active span:nth-child(3){
+    transform:translateY(-7.5px) rotate(-45deg);
+    }
+    
+    /* メニュー */
+    .menu{
+    width:200px;
+    right:-200px;
+    }
+    
+    /* メニュー表示 */
+    .menu.active{
+    right:0;
+    }
+    
+    .menu a{
+    font-size:18px;
+    }
+    
+    /* オーダーフォーム */
     
     h1{
     font-size:22px;
