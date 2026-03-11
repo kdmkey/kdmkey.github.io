@@ -48,3 +48,25 @@
     menu.addEventListener("click", function(e){
     e.stopPropagation();
     });
+
+    /* メニュー内クリックは閉じない */
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function(e){
+    
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    
+    if(name.length < 2){
+    alert("お名前を正しく入力してください");
+    e.preventDefault();
+    return;
+    }
+    
+    if(!email.includes("@")){
+    alert("正しいメールアドレスを入力してください");
+    e.preventDefault();
+    return;
+    }
+    
+    });

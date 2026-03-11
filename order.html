@@ -39,16 +39,41 @@
 <form action="https://formspree.io/f/xqeypekn" method="POST">
 
 <label>お名前</label>
-<input type="text" name="name" required>
+<input 
+type="text" 
+name="name" 
+required 
+minlength="2"
+oninvalid="this.setCustomValidity('お名前を入力してください')"
+oninput="this.setCustomValidity('')"
+>
 
 <label>お電話番号</label>
-<input type="tel" name="phone">
+<input 
+type="tel" 
+name="phone" 
+pattern="[0-9\-]{10,13}" 
+placeholder="例：09012345678"
+oninvalid="this.setCustomValidity('正しい電話番号を入力してください')"
+oninput="this.setCustomValidity('')"
+>
 
 <label>メールアドレス</label>
-<input type="email" name="email" required>
+<input 
+type="email" 
+name="email" 
+required
+oninvalid="this.setCustomValidity('メールアドレスを入力してください')"
+oninput="this.setCustomValidity('')"
+>
 
 <label>ご希望の制作内容</label>
-<select name="service" required>
+<select 
+name="service" 
+required
+oninvalid="this.setCustomValidity('制作内容を選択してください')"
+oninput="this.setCustomValidity('')"
+>
 <option value="">選択してください</option>
 <option value="ホームページ制作">ホームページ制作</option>
 <option value="ECサイトデザインカスタム">ECサイトデザインカスタム</option>
@@ -56,11 +81,13 @@
 <option value="その他">その他</option>
 </select>
 
-<label>制作内容（その他の場合）</label>
-<input type="text" name="service_other">
-
 <label>希望納期</label>
-<select name="deadline" required>
+<select 
+name="deadline" 
+required
+oninvalid="this.setCustomValidity('希望納期を選択してください')"
+oninput="this.setCustomValidity('')"
+>
 <option value="">選択してください</option>
 <option value="〜1ヶ月">〜1ヶ月</option>
 <option value="1ヶ月〜2ヶ月">1ヶ月〜2ヶ月</option>
@@ -68,11 +95,8 @@
 <option value="その他">その他</option>
 </select>
 
-<label>希望納期（その他の場合）</label>
-<input type="text" name="deadline_other">
-
 <label>ご予算</label>
-<input type="text" name="budget" placeholder="例：10万円前後">
+<input type="text" name="budget" placeholder="例：⚪︎万円前後">
 
 <label>その他</label>
 <textarea name="message"></textarea>
