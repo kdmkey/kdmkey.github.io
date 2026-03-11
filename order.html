@@ -48,7 +48,7 @@ oninvalid="this.setCustomValidity('お名前を入力してください')"
 oninput="this.setCustomValidity('')"
 >
 
-<label>お電話番号</label>
+<label>お電話番号 <span class="optional">(任意)</span></label>
 <input 
 type="tel" 
 name="phone" 
@@ -67,6 +67,16 @@ oninvalid="this.setCustomValidity('メールアドレスを入力してくださ
 oninput="this.setCustomValidity('')"
 >
 
+<label>Instagramアカウント <span class="optional">(任意)</span></label>
+<input 
+type="text" 
+name="instagram" 
+placeholder="例：@username"
+pattern="^@?[A-Za-z0-9._]{1,30}$"
+oninvalid="this.setCustomValidity('正しいInstagramアカウントを入力してください')"
+oninput="this.setCustomValidity('')"
+>
+
 <label>ご希望の制作内容</label>
 <select 
 name="service" 
@@ -77,7 +87,7 @@ oninput="this.setCustomValidity('')"
 <option value="">選択してください</option>
 <option value="ホームページ制作">ホームページ制作</option>
 <option value="ECサイトデザインカスタム">ECサイトデザインカスタム</option>
-<option value="デザイン">デザイン</option>
+<option value="デザイン">ロゴデザイン</option>
 <option value="その他">その他</option>
 </select>
 
@@ -92,10 +102,10 @@ oninput="this.setCustomValidity('')"
 <option value="〜1ヶ月">〜1ヶ月</option>
 <option value="1ヶ月〜2ヶ月">1ヶ月〜2ヶ月</option>
 <option value="〜3ヶ月">〜3ヶ月</option>
-<option value="その他">その他</option>
+<option value="その他">未定</option>
 </select>
 
-<label>ご予算</label>
+<label>ご予算 <span class="optional">(任意)</span></label>
 <input type="text" name="budget" placeholder="例：⚪︎万円前後">
 
 <label>その他</label>

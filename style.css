@@ -144,7 +144,7 @@ padding:10px 0;
 font-size:16px;
 
 border:none;
-border-bottom:1px solid #ccc !important;
+border-bottom:1px solid #ccc;
 
 box-sizing:border-box;
 background:transparent;
@@ -161,16 +161,24 @@ cursor:pointer;
 width:100%;
 }
 
-/* バリテーション */
-
-input:invalid,
-select:invalid{
-border-bottom:2px solid red !important;
+/* 任意文字グレー */
+.optional{
+    color:#999;
+    font-size:14px;
+    }
+select{
+color:#999;
 }
 
-input:valid,
 select:valid{
-border-bottom:2px solid black !important;
+color:black;
+}
+
+/* エラー時のみ赤 */
+
+input:invalid:focus,
+select:invalid:focus{
+border-bottom:2px solid red;
 }
 
 /* スマホ用 */
