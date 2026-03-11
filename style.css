@@ -244,4 +244,13 @@ button{
 padding:14px;
 }
 
+/* スマホ オーダーフォーム下線幅調整 */
+
+input,
+select,
+textarea{
+width:90%;
+margin:0 auto;
+}
+
 }
