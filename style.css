@@ -178,8 +178,16 @@ select{
 color:#999;
 }
 
+/* バリテーション文字カラー */
+
 select:valid{
 color:black;
+}
+
+/* 例カラー */
+
+input::placeholder{
+color:#d7d7d7;
 }
 
 /* エラー時のみ赤 */
@@ -235,7 +243,6 @@ text-align:left;
     width:80%;
     margin:10px auto 6px;
     line-height:1.5;
-    white-space:nowrap;
 }
 
 .agreement{
@@ -261,7 +268,7 @@ button:not(:disabled){
 background:black;
 color:white;
 }
-/* スマホ用 */
+/* 〜〜〜〜〜〜〜〜〜〜スマホ用〜〜〜〜〜〜〜〜〜〜 */
 @media (max-width:768px){
 
 .header{
@@ -322,6 +329,14 @@ gap:16px;
 
 button{
 padding:14px;
+}
+
+/* 項目左寄せ */
+
+label{
+display:block;
+width:80%;
+text-align:left;
 }
 
 /* オーダーフォーム下線幅調整 */
