@@ -181,6 +181,33 @@ select:invalid:focus{
 border-bottom:2px solid red;
 }
 
+/* アーカイブページ */
+
+.archive{
+max-width:900px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.archive h2{
+margin:40px 0 20px;
+font-size:20px;
+border-bottom:1px solid #ccc;
+padding-bottom:5px;
+}
+
+.archive-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+gap:20px;
+}
+
+.archive-grid img{
+width:100%;
+height:auto;
+display:block;
+}
+
 /* 同意 */
 
 .notice{
