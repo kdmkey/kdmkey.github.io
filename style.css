@@ -369,7 +369,7 @@ text-align:left;
 display:flex;
 align-items:center;
 gap:6px;
-
+justify-content:center;
 width:80%;
 margin:20px auto;
 }
