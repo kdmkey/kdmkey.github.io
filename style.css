@@ -278,7 +278,7 @@ button{
 padding:14px;
 }
 
-/* スマホ オーダーフォーム下線幅調整 */
+/* オーダーフォーム下線幅調整 */
 
 input,
 select,
@@ -286,5 +286,14 @@ textarea{
 width:80%;
 margin:0 auto;
 }
+/* 同意 */
 
+.agreement{
+display:flex;
+align-items:center;
+gap:6px;
+
+width:80%;
+margin:20px 0 20px 20%;
+}
 }
