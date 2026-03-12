@@ -165,7 +165,7 @@ width:100%;
 .optional{
     color:#999;
     font-size:14px;
-    }
+}
 select{
 color:#999;
 }
@@ -324,6 +324,18 @@ textarea{
 width:80%;
 margin:0 auto;
 }
+
+/* 説明文 */
+
+.explanation{
+font-size:12px;
+color:#666;
+width:80%;
+margin:10px auto 6px;
+line-height:1.5;
+text-align:left;
+}
+
 /* 同意 */
 
 .agreement{
