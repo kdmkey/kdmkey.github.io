@@ -66,7 +66,7 @@ required
 oninvalid="this.setCustomValidity('メールアドレスを入力してください')"
 oninput="this.setCustomValidity('')"
 >
-<p class="notice">※返信可能なメールアドレスをご入力ください。</p>
+<p class="notice">＊返信可能なメールアドレスをご入力ください。</p>
 
 <label>Instagramアカウント <span class="optional">(任意)</span></label>
 <input 
@@ -92,8 +92,8 @@ oninput="this.setCustomValidity('')"
 <option value="その他">その他</option>
 </select>
 <p class="notice">
-    ※ECサイトは現状「BASE」に限ります。<br>
-    ※選択項目にない商品は“その他”をお選びいただき、お気軽にお問合せください。
+    ＊ECサイトは現状「BASE」に限ります。<br>
+    ＊選択項目にない商品は“その他”をお選びいただき、お気軽にお問合せください。
 </p>
 
 <label>希望納期</label>
@@ -110,8 +110,18 @@ oninput="this.setCustomValidity('')"
 <option value="その他">未定</option>
 </select>
 
+<p class="notice">
+＊制作内容により納期が前後する場合がございます<br>
+＊正式な納期はヒアリング後にご案内いたします
+</p>
+
 <label>ご予算 <span class="optional">(任意)</span></label>
 <input type="text" name="budget" placeholder="例：⚪︎万円前後">
+
+<p class="notice">
+＊おおよそのご予算をご入力ください<br>
+＊ご予算に合わせて制作内容をご提案することも可能です
+</p>
 
 <label>その他</label>
 <textarea name="message"></textarea>
