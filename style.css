@@ -181,6 +181,40 @@ select:invalid:focus{
 border-bottom:2px solid red;
 }
 
+/* 同意 */
+
+.notice{
+    font-size:12px;
+    color:#666;
+    width:80%;
+    margin:10px auto 6px;
+    line-height:1.5;
+    white-space:nowrap;
+}
+
+.agreement{
+display:flex;
+align-items:center;
+gap:6px;
+
+width:80%;
+margin:20px 0 20px 30%;
+}
+
+.agreement input{
+width:auto;
+margin:0;
+}
+
+button:disabled{
+background:#ccc;
+cursor:not-allowed;
+}
+
+button:not(:disabled){
+background:black;
+color:white;
+}
 /* スマホ用 */
 @media (max-width:768px){
 
@@ -247,11 +281,10 @@ padding:14px;
 /* スマホ オーダーフォーム下線幅調整 */
 
 input,
+select,
 textarea{
 width:80%;
 margin:0 auto;
 }
 
-select{
-width:100%;
 }

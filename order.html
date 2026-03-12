@@ -111,7 +111,18 @@ oninput="this.setCustomValidity('')"
 <label>その他</label>
 <textarea name="message"></textarea>
 
-<button type="submit">送信</button>
+<ul class="notice">
+    <li>内容をご確認のうえ送信してください。</li>
+    <li>返信にはお時間をいただく場合があります。</li>
+    <li>3日以内に返信がない場合は再度ご連絡ください。</li>
+</ul>
+
+<label class="agreement">
+    <input type="checkbox" id="agree">
+    上記の確認事項に同意します
+</label>
+    
+<button type="submit" id="submitBtn" disabled>送信</button>
 
 </form>
 

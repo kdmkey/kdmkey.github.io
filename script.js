@@ -70,3 +70,10 @@
     }
     
     });
+
+    const checkbox = document.getElementById("agree");
+    const button = document.getElementById("submitBtn");
+    
+    checkbox.addEventListener("change", function(){
+    button.disabled = !checkbox.checked;
+    });
