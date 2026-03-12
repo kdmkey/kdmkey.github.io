@@ -71,6 +71,7 @@
     
     });
 
+    /* 同意 */
     const checkbox = document.getElementById("agree");
     const button = document.getElementById("submitBtn");
     

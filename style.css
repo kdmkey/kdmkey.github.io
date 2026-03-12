@@ -259,15 +259,21 @@ width:auto;
 margin:0;
 }
 
+/* 色変化の秒数 */
+button{
+transition:background 0.8s ease;
+}
+/* 同意前 */
 button:disabled{
 background:#ccc;
 cursor:not-allowed;
 }
-
+/* 同意後 */
 button:not(:disabled){
 background:black;
 color:white;
 }
+
 /* 〜〜〜〜〜〜〜〜〜〜スマホ用〜〜〜〜〜〜〜〜〜〜 */
 @media (max-width:768px){
 
