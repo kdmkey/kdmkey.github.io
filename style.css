@@ -323,6 +323,9 @@ select,
 textarea{
 width:80%;
 margin:0 auto;
+display:block;
+padding:10px;
+box-sizing:border-box;
 }
 
 /* 説明文 */
