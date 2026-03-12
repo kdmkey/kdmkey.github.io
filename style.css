@@ -336,6 +336,7 @@ padding:14px;
 label{
 display:block;
 width:80%;
+margin:0 auto;
 text-align:left;
 }
 
@@ -345,6 +346,7 @@ input,
 select,
 textarea{
 width:80%;
+margin:0 auto;
 display:block;
 padding:10px;
 box-sizing:border-box;
