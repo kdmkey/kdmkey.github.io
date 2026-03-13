@@ -281,6 +281,40 @@ background:black;
 color:white;
 }
 
+/* フッター */
+
+footer{
+  padding:40px 0;
+  text-align:center;
+  border-top:1px solid #eee;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-bottom:15px;
+}
+
+.icon{
+  color:black;
+  transition:0.3s;
+}
+
+.icon svg{
+  width:28px;
+  height:28px;
+}
+
+.icon:hover{
+  opacity:0.6;
+}
+
+.copyright{
+  font-size:12px;
+  color:#666;
+}
+
 /* 〜〜〜〜〜〜〜〜〜〜スマホ用〜〜〜〜〜〜〜〜〜〜 */
 @media (max-width:768px){
 
