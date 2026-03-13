@@ -117,6 +117,33 @@ font-size:20px;
 letter-spacing:2px;
 }
 
+/* 友人 家族バナー */
+
+.flow-band{
+  width:100%;
+  overflow:hidden;
+}
+
+.flow-track{
+  display:flex;
+  width:max-content;
+  animation:flow 35s linear infinite;
+}
+
+.flow-track img{
+  height:60px;
+  flex-shrink:0;
+}
+
+@keyframes flow{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
 /* body */
 body{
 background:white;
