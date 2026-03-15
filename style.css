@@ -156,6 +156,15 @@ padding-top:120px;
 
 /* オーダーフォーム */
 
+body#orderPage{
+  background-color:#fff;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size:24px 24px;
+  background-position:0 0,12px 12px;
+}
+
 form{
 max-width:500px;
 margin:40px auto;
