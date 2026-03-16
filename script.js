@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 /* HOME背景 */
+
 window.addEventListener("load", function(){
 
 const canvas = document.getElementById("bg");
