@@ -146,6 +146,8 @@ letter-spacing:2px;
 
 .home-img{
   width:440px;
+  max-width:90vw;
+  height:auto;
   display:block;
   margin:120px auto;
   cursor:pointer;
