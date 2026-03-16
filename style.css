@@ -153,6 +153,10 @@ letter-spacing:2px;
   cursor:pointer;
 }
 
+.home-img:first-of-type{
+  margin-top:20px;
+}
+
 /* body */
 body{
 background:white;
