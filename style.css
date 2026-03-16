@@ -117,6 +117,15 @@ font-size:20px;
 letter-spacing:2px;
 }
 
+#bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
 /* 友人 家族バナー */
 
 .flow-band{
@@ -143,6 +152,8 @@ letter-spacing:2px;
     transform:translateX(-50%);
   }
 }
+
+/* HOME　png */
 
 .home-img{
   width:440px;
