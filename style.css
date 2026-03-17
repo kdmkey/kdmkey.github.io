@@ -193,6 +193,10 @@ flex-direction:column;
 
 /* オーダーフォーム */
 
+.page-order{
+  color:#ccc; /* グレー */
+}
+
 body#orderPage{
   background-color:#fff;
   background-image:
