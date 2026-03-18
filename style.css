@@ -162,6 +162,14 @@ letter-spacing:2px;
   display:block;
   margin:120px auto;
   cursor:pointer;
+
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで拡大 */
+.home-img:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 .home-img:first-of-type{
