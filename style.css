@@ -275,13 +275,6 @@ input::placeholder{
 color:#d7d7d7;
 }
 
-/* エラー時のみ赤 */
-
-input:invalid:focus,
-select:invalid:focus{
-border-bottom:2px solid red;
-}
-
 /* アーカイブページ */
 
 .archive{
