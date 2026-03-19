@@ -303,6 +303,28 @@ width:100%;
 height:auto;
 display:block;
 }
+/* アーカイブ背景グラデ */
+body.archive{
+  animation: bgChange 20s linear infinite;
+}
+
+@keyframes bgChange{
+  0%{
+    background: rgb(255, 255, 240); /* 超うすい黄色 */
+  }
+  25%{
+    background: rgb(245, 255, 245); /* ほぼ白の緑 */
+  }
+  50%{
+    background: rgb(240, 250, 255); /* うすい水色寄り */
+  }
+  75%{
+    background: rgb(245, 240, 255); /* うすい紫 */
+  }
+  100%{
+    background: rgb(255, 255, 240); /* 最初に戻す */
+  }
+}
 
 /* 説明文 */
 
