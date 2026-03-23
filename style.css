@@ -128,7 +128,7 @@ font-family: "special-gothic", sans-serif;
   z-index:-1;
 }
 
-/* 友人 家族バナー */
+/* 回転バナー */
 
 .flow-band{
   width:100%;
@@ -153,38 +153,6 @@ font-family: "special-gothic", sans-serif;
   to{
     transform:translateX(-50%);
   }
-}
-
-/* HOME　png */
-
-.home-img{
-  width:440px;
-  max-width:90vw;
-  height:auto;
-  display:block;
-  margin:120px auto;
-  cursor:pointer;
-
-  transition: transform 0.3s ease;
-}
-
-/* ホバーで拡大 */
-.home-img:hover{
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-.home-img:first-of-type{
-  margin-top:20px;
-}
-
-.home-menu a:nth-child(1) .home-img{
-  width:300px;
-}
-
-.home-menu a:nth-child(3) .home-img{
-  width:520px;
-  max-width:95vw;
 }
 
 /* body */
