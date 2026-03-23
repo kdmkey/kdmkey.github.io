@@ -172,3 +172,10 @@ requestAnimationFrame(animate);
 animate();
 
 });
+
+const checker = document.querySelector('.checker');
+
+checker.addEventListener('mousemove', () => {
+  const size = Math.random() * 100 + 20;
+  checker.style.backgroundSize = size + 'px ' + size + 'px';
+});
