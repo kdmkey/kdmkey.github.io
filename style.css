@@ -155,6 +155,19 @@ font-family: "special-gothic", sans-serif;
   }
 }
 
+.hero{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover; /* 画面いっぱいにフィット */
+}
+
 /* body */
 body{
 background:white;
