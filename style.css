@@ -165,7 +165,8 @@ font-family: "special-gothic", sans-serif;
 .hero img{
   width:100%;
   height:100%;
-  object-fit:cover; 
+  object-fit:cover;
+  filter: brightness(1.14) contrast(2);
 }
 
 /* body */
