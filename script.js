@@ -134,7 +134,7 @@ resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
 /* ドット生成 */
-for(let i=0;i<80;i++){
+for(let i=0;i<100;i++){
 dots.push({
 x:Math.random()*window.innerWidth,
 y:Math.random()*window.innerHeight,
