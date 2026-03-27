@@ -133,6 +133,7 @@ font-family: "special-gothic", sans-serif;
 .flow-band{
   width:100%;
   overflow:hidden;
+  position:relative;
 }
 
 .flow-track{
@@ -182,6 +183,7 @@ padding-top:70px;
 min-height:100vh;
 display:flex;
 flex-direction:column;
+overflow-x: hidden;
 }
 
 /* ABOUT */
