@@ -138,7 +138,7 @@ font-family: "special-gothic", sans-serif;
 .flow-track{
   display:flex;
   width:200%;
-  animation:flow 18s linear infinite;
+  animation:flow 15s linear infinite;
 }
 
 .flow-track img{
@@ -551,4 +551,10 @@ gap:6px;
 justify-content:center;
 width:80%;
 margin:20px auto;
+}
+
+/* 回転バナー */
+
+.flow-track{
+  animation:flow 5s linear infinite;
 }
