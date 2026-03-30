@@ -133,13 +133,12 @@ font-family: "special-gothic", sans-serif;
 .flow-band{
   width:100%;
   overflow:hidden;
-  position:relative;
 }
 
 .flow-track{
   display:flex;
-  width:max-content;
-  animation:flow 35s linear infinite;
+  width:200%;
+  animation:flow 18s linear infinite;
 }
 
 .flow-track img{

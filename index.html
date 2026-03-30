@@ -74,28 +74,40 @@
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   
-  // 画面サイズ
+  // ===== レスポンシブ設定 =====
+  function getResponsiveSize(){
+    return window.innerWidth < 768
+      ? window.innerWidth * 0.8   // スマホは画面の80%
+      : 500;                     // PCは固定
+  }
+  
+  function getSpeed(){
+    return window.innerWidth < 768 ? 2 : 4;
+  }
+  
+  // ===== 画面サイズ =====
   function resize(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+  
+    obj.size = getResponsiveSize();
   }
-  resize();
   window.addEventListener("resize", resize);
   
-  // 画像
+  // ===== 画像 =====
   const img = new Image();
-  img.src = "images/name.png"; // ←ここ変更
+  img.src = "images/name.png"; // ←ここ変える
   
-  // オブジェクト
+  // ===== オブジェクト =====
   const obj = {
-    x: 100,
-    y: 100,
-    size: 500, // 基準サイズ
-    dx: 4,
-    dy: 3
+    x: 0,
+    y: 0,
+    size: getResponsiveSize(),
+    dx: getSpeed(),
+    dy: getSpeed() * 0.75
   };
   
-  // アニメーション
+  // ===== アニメーション =====
   function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
@@ -103,12 +115,12 @@
     obj.x += obj.dx;
     obj.y += obj.dy;
   
-    // 縦横比を維持
+    // 縦横比
     const aspect = img.width / img.height;
     const width = obj.size;
     const height = obj.size / aspect;
   
-    // 壁で反射（サイズ考慮）
+    // 壁反射（ぬるっと感）
     if(obj.x <= 0 || obj.x + width >= canvas.width){
       obj.dx *= -1;
     }
@@ -122,12 +134,29 @@
     requestAnimationFrame(animate);
   }
   
-  // 読み込み後スタート
+  // ===== 初期化 =====
   img.onload = () => {
+    resize();
+  
+    // 中央スタート
+    obj.x = canvas.width / 2 - obj.size / 2;
+    obj.y = canvas.height / 2 - obj.size / 2;
+  
     animate();
   };
   </script>
-
+  
+  <style>
+  body{
+    margin:0;
+    overflow:hidden;
+  }
+  
+  canvas{
+    display:block;
+  }
+  </style>
+  
 <footer class="footer">
 
   <div class="footer-links">
