@@ -68,47 +68,6 @@
     </ul>
 </nav>
 
-<div id="weatherBox">
-  <div id="dayNight"></div>
-  <img id="weatherIcon">
-  <p id="temp"></p>
-</div>
-
-<script>
-const apiKey = "ff3b8a3f9550845df17aadb649203aa0";
-const city = "Fukuoka";
-
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=ja`)
-  .then(res => res.json())
-  .then(data => {
-
-    // 🌡 気温
-    document.getElementById("temp").textContent =
-      Math.round(data.main.temp) + "°C";
-
-    // ☁️ 天気アイコン
-    const icon = data.weather[0].icon;
-    document.getElementById("weatherIcon").src =
-      `https://openweathermap.org/img/wn/${icon}@2x.png`;
-
-    // 🌅 日の出・日の入り
-    const sunrise = data.sys.sunrise * 1000;
-    const sunset = data.sys.sunset * 1000;
-    const now = new Date().getTime();
-
-    const dayNight = document.getElementById("dayNight");
-
-    // ☀️🌙 切り替え（ここが重要）
-    if (now >= sunrise && now < sunset) {
-      dayNight.textContent = "☀️"; // 朝〜昼
-    } else {
-      dayNight.textContent = "🌙"; // 夜
-    }
-
-  })
-  .catch(err => console.log(err));
-</script>
-
 <section class="hero">
   <img src="images/IMG_1579.png">
 </section>
