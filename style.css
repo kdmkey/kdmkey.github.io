@@ -145,6 +145,7 @@ font-family: "special-gothic", sans-serif;
   position: absolute;
   top: 70px;  /* ← ヘッダーの高さ分 */
   width: 100%;
+  overflow: hidden; 
 }
 
 .flow-track{
