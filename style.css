@@ -151,7 +151,7 @@ font-family: "special-gothic", sans-serif;
 .flow-track{
   display: flex;
   width: max-content; /* ← これが最重要 */
-  animation: flow 20s linear infinite;
+  animation: flow 30s linear infinite;
 }
 
 .flow-track img{
