@@ -68,82 +68,97 @@
     </ul>
 </nav>
 
-<canvas id="canvas"></canvas>
+<main>
+  <canvas id="canvas"></canvas>
+</main>
 
 <script>
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   
-  // ===== レスポンシブ設定 =====
-  function getResponsiveSize(){
-    return window.innerWidth < 768
-      ? window.innerWidth * 0.8   // スマホは画面の80%
-      : 500;                     // PCは固定
-  }
-  
-  function getSpeed(){
-    return window.innerWidth < 768 ? 2 : 4;
-  }
-  
   // ===== 画面サイズ =====
   function resize(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-  
-    obj.size = getResponsiveSize();
   }
   window.addEventListener("resize", resize);
   
   // ===== 画像 =====
-  const img = new Image();
-  img.src = "images/name.png"; // ←ここ変える
+  const img1 = new Image();
+  img1.src = "images/STAR3.png";
+  
+  const img2 = new Image();
+  img2.src = "images/STAR.png";
   
   // ===== オブジェクト =====
-  const obj = {
-    x: 0,
-    y: 0,
-    size: getResponsiveSize(),
-    dx: getSpeed(),
-    dy: getSpeed() * 0.75
-  };
+  const objs = [
+    {
+      img: img1,
+      x: 0,
+      y: 0,
+      size: 200,
+      dx: 3,
+      dy: 2
+    },
+    {
+      img: img2,
+      x: 100,
+      y: 100,
+      size: 200,
+      dx: -2,
+      dy: 3
+    }
+  ];
   
   // ===== アニメーション =====
   function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-    // 移動
-    obj.x += obj.dx;
-    obj.y += obj.dy;
+    objs.forEach(obj => {
+      const img = obj.img;
   
-    // 縦横比
-    const aspect = img.width / img.height;
-    const width = obj.size;
-    const height = obj.size / aspect;
+      obj.x += obj.dx;
+      obj.y += obj.dy;
   
-    // 壁反射（ぬるっと感）
-    if(obj.x <= 0 || obj.x + width >= canvas.width){
-      obj.dx *= -1;
-    }
-    if(obj.y <= 0 || obj.y + height >= canvas.height){
-      obj.dy *= -1;
-    }
+      const aspect = img.width / img.height;
+      const width = obj.size;
+      const height = obj.size / aspect;
   
-    // 描画
-    ctx.drawImage(img, obj.x, obj.y, width, height);
+      // 壁反射
+      if(obj.x <= 0 || obj.x + width >= canvas.width){
+        obj.dx *= -1;
+      }
+      if(obj.y <= 0 || obj.y + height >= canvas.height){
+        obj.dy *= -1;
+      }
+  
+      ctx.drawImage(img, obj.x, obj.y, width, height);
+    });
   
     requestAnimationFrame(animate);
   }
   
-  // ===== 初期化 =====
-  img.onload = () => {
-    resize();
+  // ===== 画像ロード待ち =====
+  let loaded = 0;
   
-    // 中央スタート
-    obj.x = canvas.width / 2 - obj.size / 2;
-    obj.y = canvas.height / 2 - obj.size / 2;
+  function checkLoad(){
+    loaded++;
+    if(loaded === 2){
+      resize();
   
-    animate();
-  };
+      // 初期位置（中央付近）
+      objs[0].x = canvas.width / 2 - 200;
+      objs[0].y = canvas.height / 2;
+  
+      objs[1].x = canvas.width / 2 + 50;
+      objs[1].y = canvas.height / 2;
+  
+      animate();
+    }
+  }
+  
+  img1.onload = checkLoad;
+  img2.onload = checkLoad;
   </script>
 
 <footer class="footer">
