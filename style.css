@@ -142,28 +142,31 @@ font-family: "special-gothic", sans-serif;
 
 .flow-band{
   position: absolute;
-  top: 70px;  /* ← ヘッダーの高さ分 */
+  top: 70px; /* ヘッダー高さ */
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
+  z-index: 10;
 }
 
 .flow-track{
-  display:flex;
-  width:200%;
-  animation:flow 15s linear infinite;
+  display: flex;
+  width: max-content; /* ← これが最重要 */
+  animation: flow 20s linear infinite;
 }
 
 .flow-track img{
-  height:60px;
-  flex-shrink:0;
+  height: 60px;
+  display: block;     /* ← 余白防止 */
+  flex-shrink: 0;
 }
 
+/* アニメーション */
 @keyframes flow{
-  from{
-    transform:translateX(0);
+  0%{
+    transform: translateX(0);
   }
-  to{
-    transform:translateX(-50%);
+  100%{
+    transform: translateX(-50%);
   }
 }
 
@@ -567,5 +570,5 @@ margin:20px auto;
 /* 回転バナー */
 
 .flow-track{
-  animation:flow 5s linear infinite;
+  animation: flow 40s linear infinite;
 }
