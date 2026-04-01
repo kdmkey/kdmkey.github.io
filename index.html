@@ -73,93 +73,105 @@
 </main>
 
 <script>
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  
-  // ===== 画面サイズ =====
-  function resize(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// ===== 高解像度対応（最重要）=====
+function resize(){
+  const dpr = window.devicePixelRatio || 1;
+
+  // 内部解像度（実ピクセル）
+  canvas.width = window.innerWidth * dpr;
+  canvas.height = window.innerHeight * dpr;
+
+  // 見た目サイズ（CSS）
+  canvas.style.width = window.innerWidth + "px";
+  canvas.style.height = window.innerHeight + "px";
+
+  // スケール補正
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+window.addEventListener("resize", resize);
+
+// ===== 画像（できるだけ高解像度使う）=====
+const img1 = new Image();
+img1.src = "images/STAR3.png";
+
+const img2 = new Image();
+img2.src = "images/SNP.png";
+
+// ===== オブジェクト =====
+const objs = [
+  {
+    img: img1,
+    x: 0,
+    y: 0,
+    size: 200,
+    dx: 3,
+    dy: 2
+  },
+  {
+    img: img2,
+    x: 100,
+    y: 100,
+    size: 100,
+    dx: -2,
+    dy: 3
   }
-  window.addEventListener("resize", resize);
-  
-  // ===== 画像 =====
-  const img1 = new Image();
-  img1.src = "images/STAR3.png";
-  
-  const img2 = new Image();
-  img2.src = "images/SNP.png";
-  
-  // ===== オブジェクト =====
-  const objs = [
-    {
-      img: img1,
-      x: 0,
-      y: 0,
-      size: 200,
-      dx: 3,
-      dy: 2
-    },
-    {
-      img: img2,
-      x: 100,
-      y: 100,
-      size: 100,
-      dx: -2,
-      dy: 3
+];
+
+// ===== アニメーション =====
+function animate(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  objs.forEach(obj => {
+    const img = obj.img;
+
+    obj.x += obj.dx;
+    obj.y += obj.dy;
+
+    // アスペクト比維持
+    const aspect = img.width / img.height || 1;
+    const width = obj.size;
+    const height = obj.size / aspect;
+
+    // 壁反射
+    if(obj.x <= 0 || obj.x + width >= window.innerWidth){
+      obj.dx *= -1;
     }
-  ];
-  
-  // ===== アニメーション =====
-  function animate(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-    objs.forEach(obj => {
-      const img = obj.img;
-  
-      obj.x += obj.dx;
-      obj.y += obj.dy;
-  
-      const aspect = img.width / img.height;
-      const width = obj.size;
-      const height = obj.size / aspect;
-  
-      // 壁反射
-      if(obj.x <= 0 || obj.x + width >= canvas.width){
-        obj.dx *= -1;
-      }
-      if(obj.y <= 0 || obj.y + height >= canvas.height){
-        obj.dy *= -1;
-      }
-  
-      ctx.drawImage(img, obj.x, obj.y, width, height);
-    });
-  
-    requestAnimationFrame(animate);
-  }
-  
-  // ===== 画像ロード待ち =====
-  let loaded = 0;
-  
-  function checkLoad(){
-    loaded++;
-    if(loaded === 2){
-      resize();
-  
-      // 初期位置（中央付近）
-      objs[0].x = canvas.width / 2 - 200;
-      objs[0].y = canvas.height / 2;
-  
-      objs[1].x = canvas.width / 2 + 50;
-      objs[1].y = canvas.height / 2;
-  
-      animate();
+    if(obj.y <= 0 || obj.y + height >= window.innerHeight){
+      obj.dy *= -1;
     }
+
+    ctx.drawImage(img, obj.x, obj.y, width, height);
+  });
+
+  requestAnimationFrame(animate);
+}
+
+// ===== 画像ロード待ち =====
+let loaded = 0;
+
+function checkLoad(){
+  loaded++;
+  if(loaded === 2){
+    resize();
+
+    // 初期位置（中央寄せ）
+    objs[0].x = window.innerWidth / 2 - 200;
+    objs[0].y = window.innerHeight / 2;
+
+    objs[1].x = window.innerWidth / 2 + 50;
+    objs[1].y = window.innerHeight / 2;
+
+    animate();
   }
-  
-  img1.onload = checkLoad;
-  img2.onload = checkLoad;
-  </script>
+}
+
+img1.onload = checkLoad;
+img2.onload = checkLoad;
+</script>
 
 <footer class="footer">
 
