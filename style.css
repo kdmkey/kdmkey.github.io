@@ -139,12 +139,6 @@ font-family: "special-gothic", sans-serif;
   z-index:-1;
 }
 
-body.home{
-  position: fixed;
-  width: 100%;
-  height: 100dvh;
-}
-
 /* body */
 body{
 background:white;
