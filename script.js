@@ -112,36 +112,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
-  /* ========================= */
-  /* 上スクロール制御（HOMEのみ） */
-  /* ========================= */
-
-  if (document.body.classList.contains("home")) {
-
-    let lastY = 0;
-    const HEADER_TRIGGER = 80;
-
-    document.addEventListener('touchstart', function(e) {
-      lastY = e.touches[0].clientY;
-    });
-
-    document.addEventListener('touchmove', function(e) {
-
-      const currentY = e.touches[0].clientY;
-      const scrollTop = window.scrollY;
-
-      if (currentY > lastY) {
-        if (scrollTop <= HEADER_TRIGGER) {
-          e.preventDefault();
-        }
-      }
-
-      lastY = currentY;
-
-    }, { passive: false });
-
-  }
-
 });
 
 /* HOME背景 */
@@ -167,7 +137,7 @@ function resizeCanvas(){
 
   const dpr = window.devicePixelRatio || 1;
 
-  const rect = canvas.getBoundingClientRect(); // ←重要変更
+  const rect = canvas.getBoundingClientRect();
 
   const width = rect.width;
   const height = rect.height;
@@ -212,6 +182,8 @@ function createDots(){
     });
   }
 }
+
+createDots();
 
 /* アニメーション */
 function animate(){
