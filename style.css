@@ -435,6 +435,11 @@ footer{
 /* 〜〜〜〜〜〜〜〜〜〜スマホ〜〜〜〜〜〜〜〜〜〜 */
 @media (max-width:768px){
 
+body.home{
+  overflow: hidden;
+  height: 100vh;
+}
+
 .header{
 height:80px;
 padding:0 20px;
