@@ -136,17 +136,22 @@ const colors = [
 /* canvasサイズ調整 */
 function resizeCanvas(){
 
-const dpr = window.devicePixelRatio || 1;
-
-canvas.width = window.innerWidth * dpr;
-canvas.height = window.innerHeight * dpr;
-
-canvas.style.width = window.innerWidth + "px";
-canvas.style.height = window.innerHeight + "px";
-
-ctx.setTransform(dpr,0,0,dpr,0,0);
-
-}
+  const dpr = window.devicePixelRatio || 1;
+  
+  /* 表示サイズを取得（←ここが重要） */
+  const rect = canvas.getBoundingClientRect();
+  
+  /* CSSサイズに合わせる */
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  
+  }
+  
+  resizeCanvas();
+  
+  window.addEventListener("resize", resizeCanvas);
 
 resizeCanvas();
 
