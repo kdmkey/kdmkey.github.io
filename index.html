@@ -29,22 +29,6 @@
 
 <canvas id="bg"></canvas>
 
-<!-- 回転バナー -->
-
-<div class="flow-band">
-  <div class="flow-track">
-    <img src="images/名称未設定-1.png">
-    <img src="images/名称未設定-1.png">
-    <img src="images/名称未設定-1.png">
-    <img src="images/名称未設定-1.png">
-
-    <img src="images/名称未設定-1.png">
-    <img src="images/名称未設定-1.png">
-    <img src="images/名称未設定-1.png">
-    <img src="images/名称未設定-1.png">
-  </div>
-</div>
-
 <header class="header">
 
 <div class="logo">YUTO KODAMA</div>
@@ -68,110 +52,129 @@
     </ul>
 </nav>
 
+<div class="hero">
+  <div class="slides">
+    <img src="images/SL1.JPG" class="slide active">
+    <img src="images/SL2.JPG" class="slide">
+    <img src="images/SL3.JPG" class="slide">
+  </div>
+</div>
+
 <main>
   <canvas id="canvas"></canvas>
 </main>
 
 <script>
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-// ===== 高解像度対応（最重要）=====
-function resize(){
-  const dpr = window.devicePixelRatio || 1;
-
-  // 内部解像度（実ピクセル）
-  canvas.width = window.innerWidth * dpr;
-  canvas.height = window.innerHeight * dpr;
-
-  // 見た目サイズ（CSS）
-  canvas.style.width = window.innerWidth + "px";
-  canvas.style.height = window.innerHeight + "px";
-
-  // スケール補正
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-}
-
-window.addEventListener("resize", resize);
-
-// ===== 画像（できるだけ高解像度使う）=====
-const img1 = new Image();
-img1.src = "images/STAR2.png";
-
-const img2 = new Image();
-img2.src = "images/SNP.png";
-
-// ===== オブジェクト =====
-const objs = [
-  {
-    img: img1,
-    x: 0,
-    y: 0,
-    size: 100,
-    dx: 2,
-    dy: 1
-  },
-  {
-    img: img2,
-    x: 100,
-    y: 100,
-    size: 100,
-    dx: 1,
-    dy: 1
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  
+  // ===== 高解像度対応 =====
+  function resize(){
+    const dpr = window.devicePixelRatio || 1;
+  
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = window.innerHeight * dpr;
+  
+    canvas.style.width = window.innerWidth + "px";
+    canvas.style.height = window.innerHeight + "px";
+  
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
-];
-
-// ===== アニメーション =====
-function animate(){
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  objs.forEach(obj => {
-    const img = obj.img;
-
-    obj.x += obj.dx;
-    obj.y += obj.dy;
-
-    // アスペクト比維持
-    const aspect = img.width / img.height || 1;
-    const width = obj.size;
-    const height = obj.size / aspect;
-
-    // 壁反射
-    if(obj.x <= 0 || obj.x + width >= window.innerWidth){
-      obj.dx *= -1;
+  
+  window.addEventListener("resize", resize);
+  
+  // ===== 画像 =====
+  const img1 = new Image();
+  img1.src = "images/STAR2.png";
+  
+  const img2 = new Image();
+  img2.src = "images/SNP.png";
+  
+  const img3 = new Image();
+  img3.src = "images/"; // ← 追加（好きな画像に変えてOK）
+  
+  // ===== オブジェクト =====
+  const objs = [
+    {
+      img: img1,
+      x: 0,
+      y: 0,
+      size: 100,
+      dx: 0.8,
+      dy: 0.6
+    },
+    {
+      img: img2,
+      x: 100,
+      y: 100,
+      size: 100,
+      dx: -0.6,
+      dy: 0.7
+    },
+    {
+      img: img3,
+      x: 200,
+      y: 200,
+      size: 120,
+      dx: 0.5,
+      dy: -0.6
     }
-    if(obj.y <= 0 || obj.y + height >= window.innerHeight){
-      obj.dy *= -1;
-    }
-
-    ctx.drawImage(img, obj.x, obj.y, width, height);
-  });
-
-  requestAnimationFrame(animate);
-}
-
-// ===== 画像ロード待ち =====
-let loaded = 0;
-
-function checkLoad(){
-  loaded++;
-  if(loaded === 2){
-    resize();
-
-    // 初期位置（中央寄せ）
-    objs[0].x = window.innerWidth / 2 - 200;
-    objs[0].y = window.innerHeight / 2;
-
-    objs[1].x = window.innerWidth / 2 + 50;
-    objs[1].y = window.innerHeight / 2;
-
-    animate();
+  ];
+  
+  // ===== アニメーション =====
+  function animate(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+    objs.forEach(obj => {
+      const img = obj.img;
+  
+      obj.x += obj.dx;
+      obj.y += obj.dy;
+  
+      const aspect = img.width / img.height || 1;
+      const width = obj.size;
+      const height = obj.size / aspect;
+  
+      // 壁反射
+      if(obj.x <= 0 || obj.x + width >= window.innerWidth){
+        obj.dx *= -1;
+      }
+      if(obj.y <= 0 || obj.y + height >= window.innerHeight){
+        obj.dy *= -1;
+      }
+  
+      ctx.drawImage(img, obj.x, obj.y, width, height);
+    });
+  
+    requestAnimationFrame(animate);
   }
-}
-
-img1.onload = checkLoad;
-img2.onload = checkLoad;
-</script>
+  
+  // ===== 画像ロード待ち =====
+  let loaded = 0;
+  
+  function checkLoad(){
+    loaded++;
+    if(loaded === 3){ // ← 3枚になった
+      resize();
+  
+      // 初期位置（いい感じにバラす）
+      objs[0].x = window.innerWidth / 2 - 150;
+      objs[0].y = window.innerHeight / 2 - 50;
+  
+      objs[1].x = window.innerWidth / 2 + 50;
+      objs[1].y = window.innerHeight / 2;
+  
+      objs[2].x = window.innerWidth / 2;
+      objs[2].y = window.innerHeight / 2 + 100;
+  
+      animate();
+    }
+  }
+  
+  img1.onload = checkLoad;
+  img2.onload = checkLoad;
+  img3.onload = checkLoad;
+  </script>
 
 <footer class="footer">
 
