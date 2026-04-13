@@ -133,25 +133,27 @@ const colors = [
 "rgba(120,0,255,0.2)"
 ];
 
-/* canvasサイズ調整 */
+/* canvasサイズ調整（Safari対策済み） */
+let lastWidth = 0;
+
 function resizeCanvas(){
 
   const dpr = window.devicePixelRatio || 1;
-  
-  /* 表示サイズを取得（←ここが重要） */
-  const rect = canvas.getBoundingClientRect();
-  
-  /* CSSサイズに合わせる */
-  canvas.width = rect.width * dpr;
-  canvas.height = rect.height * dpr;
-  
+
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+
+  /* 横幅が変わったときだけ更新（←Safari対策） */
+  if(width === lastWidth) return;
+
+  lastWidth = width;
+
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+
   ctx.setTransform(dpr,0,0,dpr,0,0);
-  
-  }
-  
-  resizeCanvas();
-  
-  window.addEventListener("resize", resizeCanvas);
+
+}
 
 resizeCanvas();
 
