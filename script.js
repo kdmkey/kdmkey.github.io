@@ -96,10 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
   
   }
 
-  /* ===================== */
-  /* スライド追加（ここ） */
-  /* ===================== */
-
+  /* スライド */
   const slides = document.querySelectorAll(".slide");
   let current = 0;
 
@@ -126,14 +123,14 @@ const ctx = canvas.getContext("2d");
 
 let dots = [];
 
-/* 色3種類 */
+/* 色 */
 const colors = [
 "rgba(0,0,0,0.2)",
 "rgba(255,120,0,0.2)",
 "rgba(120,0,255,0.2)"
 ];
 
-/* canvasサイズ調整（Safari対策済み） */
+/* サイズ調整 */
 let lastWidth = 0;
 
 function resizeCanvas(){
@@ -143,7 +140,6 @@ function resizeCanvas(){
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;
 
-  /* 横幅が変わったときだけ更新（←Safari対策） */
   if(width === lastWidth) return;
 
   lastWidth = width;
@@ -155,43 +151,55 @@ function resizeCanvas(){
 
 }
 
+/* 初期化 */
 resizeCanvas();
-
 window.addEventListener("resize", resizeCanvas);
 
-/* ドット生成 */
-for(let i=0;i<200;i++){
-dots.push({
-x:Math.random()*window.innerWidth,
-y:Math.random()*window.innerHeight,
-r:Math.random()*2+0.5,
-dx:(Math.random()-0.5)*0.6,
-dy:(Math.random()-0.5)*0.6,
-color:colors[Math.floor(Math.random()*colors.length)]
-});
+/* ドット生成（canvas基準に修正） */
+function createDots(){
+  dots = [];
+
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+
+  for(let i=0;i<200;i++){
+    dots.push({
+      x:Math.random()*width,
+      y:Math.random()*height,
+      r:Math.random()*2+0.5,
+      dx:(Math.random()-0.5)*0.6,
+      dy:(Math.random()-0.5)*0.6,
+      color:colors[Math.floor(Math.random()*colors.length)]
+    });
+  }
 }
+
+createDots();
 
 /* アニメーション */
 function animate(){
 
-ctx.clearRect(0,0,canvas.width,canvas.height);
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
 
-dots.forEach(dot=>{
+  ctx.clearRect(0,0,canvas.width,canvas.height);
 
-dot.x += dot.dx;
-dot.y += dot.dy;
+  dots.forEach(dot=>{
 
-if(dot.x < 0 || dot.x > window.innerWidth) dot.dx *= -1;
-if(dot.y < 0 || dot.y > window.innerHeight) dot.dy *= -1;
+    dot.x += dot.dx;
+    dot.y += dot.dy;
 
-ctx.beginPath();
-ctx.arc(dot.x,dot.y,dot.r,0,Math.PI*2);
-ctx.fillStyle = dot.color;
-ctx.fill();
+    if(dot.x < 0 || dot.x > width) dot.dx *= -1;
+    if(dot.y < 0 || dot.y > height) dot.dy *= -1;
 
-});
+    ctx.beginPath();
+    ctx.arc(dot.x,dot.y,dot.r,0,Math.PI*2);
+    ctx.fillStyle = dot.color;
+    ctx.fill();
 
-requestAnimationFrame(animate);
+  });
+
+  requestAnimationFrame(animate);
 
 }
 
