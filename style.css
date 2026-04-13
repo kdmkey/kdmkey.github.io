@@ -27,7 +27,7 @@ main{
 
 #canvas{
   width: 80%;
-  height: 100px; /* ←固定 */
+  height: 100px;
   margin: 100px auto;
 }
 
@@ -477,6 +477,12 @@ right:0;
 
 .menu a{
 font-size:30px;
+}
+
+#canvas{
+  width: 90%;
+  height: 100px;
+  margin: 50px auto;
 }
 
 /* オーダーフォーム */
