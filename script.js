@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function(){
   if (document.body.classList.contains("home")) {
 
     let lastY = 0;
-    const HEADER_TRIGGER = 80; // ←調整OK（ヘッダー高さ目安）
+    const HEADER_TRIGGER = 80;
 
     document.addEventListener('touchstart', function(e) {
       lastY = e.touches[0].clientY;
@@ -130,14 +130,10 @@ document.addEventListener("DOMContentLoaded", function(){
       const currentY = e.touches[0].clientY;
       const scrollTop = window.scrollY;
 
-      // 上方向スクロール
       if (currentY > lastY) {
-
-        // ヘッダー分以上は戻れない
         if (scrollTop <= HEADER_TRIGGER) {
           e.preventDefault();
         }
-
       }
 
       lastY = currentY;
@@ -164,15 +160,17 @@ const colors = [
 "rgba(120,0,255,0.2)"
 ];
 
-/* サイズ調整 */
+/* サイズ調整（Safari対策済み） */
 let lastWidth = 0;
 
 function resizeCanvas(){
 
   const dpr = window.devicePixelRatio || 1;
 
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
+  const rect = canvas.getBoundingClientRect(); // ←重要変更
+
+  const width = rect.width;
+  const height = rect.height;
 
   if(width === lastWidth) return;
 
@@ -185,16 +183,23 @@ function resizeCanvas(){
 
 }
 
-/* 初期化 */
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+/* 初期化（遅延して安定させる） */
+requestAnimationFrame(() => {
+  resizeCanvas();
+  createDots();
+});
 
-/* ドット生成（canvas基準に修正） */
+/* resize対応 */
+window.addEventListener("resize", resizeCanvas);
+window.addEventListener("orientationchange", resizeCanvas);
+
+/* ドット生成 */
 function createDots(){
   dots = [];
 
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
+  const rect = canvas.getBoundingClientRect();
+  const width = rect.width;
+  const height = rect.height;
 
   for(let i=0;i<200;i++){
     dots.push({
@@ -208,13 +213,12 @@ function createDots(){
   }
 }
 
-createDots();
-
 /* アニメーション */
 function animate(){
 
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
+  const rect = canvas.getBoundingClientRect();
+  const width = rect.width;
+  const height = rect.height;
 
   ctx.clearRect(0,0,canvas.width,canvas.height);
 
