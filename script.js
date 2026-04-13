@@ -112,6 +112,40 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
+  /* ========================= */
+  /* 上スクロール制御（HOMEのみ） */
+  /* ========================= */
+
+  if (document.body.classList.contains("home")) {
+
+    let lastY = 0;
+    const HEADER_TRIGGER = 80; // ←調整OK（ヘッダー高さ目安）
+
+    document.addEventListener('touchstart', function(e) {
+      lastY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchmove', function(e) {
+
+      const currentY = e.touches[0].clientY;
+      const scrollTop = window.scrollY;
+
+      // 上方向スクロール
+      if (currentY > lastY) {
+
+        // ヘッダー分以上は戻れない
+        if (scrollTop <= HEADER_TRIGGER) {
+          e.preventDefault();
+        }
+
+      }
+
+      lastY = currentY;
+
+    }, { passive: false });
+
+  }
+
 });
 
 /* HOME背景 */

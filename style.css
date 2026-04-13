@@ -131,12 +131,11 @@ font-family: "special-gothic", sans-serif;
 }
 
 #bg{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  z-index:-1;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  z-index: -1;
 }
 
 /* body */
