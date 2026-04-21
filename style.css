@@ -25,6 +25,14 @@ main{
   position: relative;
 }
 
+.topimg{
+  display:block;
+  width:300px;
+  max-width:80%;
+  height:auto;
+  
+  }
+
 #canvas{
   width: 80%;
   height: 100px;
