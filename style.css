@@ -25,6 +25,17 @@ main{
   position: relative;
 }
 
+#location-info{
+position:fixed;
+top:270px;
+right:20px;
+text-align:right;
+font-size:14px;
+z-index:999;
+color: rgb(150, 150, 255);
+font-weight: 600;
+}
+
 .topimg{
   display:block;
   width:300px;
