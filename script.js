@@ -216,17 +216,3 @@ function animate(){
 animate();
 
 });
-
-if(navigator.geolocation){
-
-navigator.geolocation.getCurrentPosition(function(position){
-
-const lat = position.coords.latitude;
-const lng = position.coords.longitude;
-
-document.getElementById("location-info").innerHTML =
-lat.toFixed(6) + " " + lng.toFixed(6);
-
-});
-
-}
