@@ -38,6 +38,31 @@ main {
   gap: 5px;
 }
 
+/* Instagram入力 */
+.input-group {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+/* @ 表示 */
+.prefix {
+  color: #999;
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+/* 入力欄 */
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 16px;
+  background: transparent;
+}
+
 .home-icon {
   width: clamp(30px, 6vw, 40px);
   height: auto;
@@ -535,6 +560,11 @@ margin:0 auto;
 display:block;
 padding:10px;
 box-sizing:border-box;
+}
+
+.input-group{
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* 説明文 */

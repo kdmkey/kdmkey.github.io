@@ -67,17 +67,23 @@ required
 oninvalid="this.setCustomValidity('メールアドレスを入力してください')"
 oninput="this.setCustomValidity('')"
 >
-<p class="explanation">＊返信可能なメールアドレスをご入力ください。</p>
+<p class="explanation">
+  ＊返信可能なメールアドレスをご入力ください。<br>
+  ＊yutokodamakdm@gmail.comからのメールを受信できるよう設定をお願いいたします。
+</p>
 
 <label>Instagramアカウント <span class="optional">(任意)</span></label>
-<input 
-type="text" 
-name="instagram" 
-placeholder="例：@username"
-pattern="^@?[A-Za-z0-9._]{1,30}$"
-oninvalid="this.setCustomValidity('正しいInstagramアカウントを入力してください')"
-oninput="this.setCustomValidity('')"
->
+<div class="input-group">
+  <span class="prefix">@</span>
+  <input
+   type="text"
+   name="instagram"
+   placeholder="username"
+   pattern="^[A-Za-z0-9._]{1,30}$"
+   oninvalid="this.setCustomValidity('正しいInstagramアカウントを入力してください')"
+   oninput="this.setCustomValidity('')"
+   >
+</div>
 
 <label>ご希望の制作内容</label>
 <select 
@@ -129,7 +135,7 @@ oninput="this.setCustomValidity('')"
 
 <ul class="notice">
 <li>ご入力いただいた内容はオーダー受付およびご連絡のために使用いたします。</li>
-<li>オーダー内容を確認後、yutokodamakdm@gmail.com より折り返しご連絡いたします。</li>
+<li>オーダー内容を確認後、yutokodamakdm@gmail.comより折り返しご連絡いたします。</li>
 <li>返信にはお時間をいただく場合があります。3日以内に返信がない場合は、迷惑メールフォルダをご確認のうえ再度ご連絡ください。</li>
 <li>内容によってはご希望に添えない場合がございますので、あらかじめご了承ください。</li>
 </ul>
