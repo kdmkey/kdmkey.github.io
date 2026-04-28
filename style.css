@@ -32,15 +32,17 @@ main {
   align-items: center;
 }
 
-.home-links a:first-child::before,
-.home-links a:first-child::after {
-  content: "";
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  margin: 0 10px;
+.home-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
-  background: url("images/home.svg") no-repeat center / contain;
+.home-icon {
+  width: clamp(30px, 6vw, 40px);
+  height: auto;
+  fill: black;
+  transition: 0.3s;
 }
 
 .home-links {
