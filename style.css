@@ -156,7 +156,7 @@ transform:translateY(-9px) rotate(-45deg);
   width:250px;
   height:100vh;
 
-  background-color:#fff;
+  background-color:#ffffff;
 
   background-image:
     radial-gradient(circle, rgba(255, 0, 0, 0.4) 6px, transparent 6px),
@@ -205,6 +205,28 @@ font-family: "special-gothic", sans-serif;
   width: 100vw;
   height: 100dvh;
   z-index: -1;
+}
+
+.home-links a.sub-heading{
+  font-size: clamp(16px, 3.5vw, 22px);
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.home-links a.sub-heading::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.home-links a.sub-heading:hover::after{
+  width: 100%;
 }
 
 /* body */
