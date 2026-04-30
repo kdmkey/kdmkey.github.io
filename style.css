@@ -150,25 +150,28 @@ transform:translateY(-9px) rotate(-45deg);
 
 /* メニュー */
 .menu{
-position:fixed;
+  position:fixed;
+  top:0;
+  right:-250px;
+  width:250px;
+  height:100vh;
 
-top:0;
-right:-250px;
+  background-color:#fff;
 
-width:250px;
-height:100vh;
+  background-image:
+    radial-gradient(circle, rgba(255, 0, 0, 0.4) 6px, transparent 6px),
+    radial-gradient(circle, rgba(0, 150, 255, 0.4) 6px, transparent 6px),
+    radial-gradient(circle, rgba(0, 200, 100, 0.4) 6px, transparent 6px);
 
-background:transparent;
+  background-size:80px 80px;
+  background-position:0 0, 20px 20px, 40px 40px;
 
-display:flex;
-justify-content:center;
-align-items:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-transition:0.4s;
-
-z-index:900;
-
-box-shadow:none;
+  transition:0.4s;
+  z-index:900;
 }
 
 /* メニュー表示 */
