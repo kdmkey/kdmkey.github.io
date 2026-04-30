@@ -454,6 +454,76 @@ background:black;
 color:white;
 }
 
+/* コンタクト */
+.contact{
+  max-width:600px;
+  margin:120px auto;
+  text-align:center;
+}
+
+.contact-info{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.contact h1{
+  margin-right: 200px;
+}
+
+.contact-name{
+  font-size:20px;
+  letter-spacing:0px;
+  font-weight:600;
+}
+
+.contact-item{
+  font-size:16px;
+  color:#000;
+  text-decoration:none;
+  position:relative;
+  font-weight:600;
+}
+
+.contact-item::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:#000;
+  transition:0.3s;
+}
+
+.contact-item:hover::after{
+  width:100%;
+}
+
+.contact-base{
+  font-size:12px;
+  color:#999;
+  letter-spacing:0px;
+  margin-top:10px;
+}
+
+.contact-item{
+  font-size:16px;
+  color:#000;
+  text-decoration:none;
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.contact-icon{
+  width:18px;
+  height:18px;
+}
+
 /* フッター */
 
 footer{
@@ -612,4 +682,9 @@ gap:6px;
 justify-content:center;
 width:80%;
 margin:20px auto;
+}
+
+/* コンタクト */
+.contact h1{
+  margin-right: 50px;
 }
