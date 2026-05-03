@@ -491,12 +491,15 @@ color:white;
 }
 
 .modal-content{
-  background: rgba(255,255,255,0.2); /* ←かなり透明にする */
-  backdrop-filter: blur(10px);       /* ←ぼかし */
-  -webkit-backdrop-filter: blur(10px); /* Safari用 */
-  padding: 50px 30px 30px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 40px 20px 20px; /* ←スマホ用に少し狭める */
   max-width: 400px;
   width: 90%;
+  box-sizing: border-box;
+
   position: relative;
   font-size: 14px;
   font-weight: 600;

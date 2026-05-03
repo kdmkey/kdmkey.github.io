@@ -217,22 +217,20 @@ animate();
 
 });
 
+/* モーダル */
 document.addEventListener("DOMContentLoaded", () => {
 
   const modal = document.getElementById("modal");
   const closeBtn = document.getElementById("closeModal");
 
-  // ページ開いたら表示
   setTimeout(() => {
     modal.classList.add("show");
   }, 300);
 
-  // ×で閉じる
   closeBtn.addEventListener("click", () => {
     modal.classList.remove("show");
   });
 
-  // 背景クリックでも閉じる
   modal.addEventListener("click", (e) => {
     if(e.target === modal){
       modal.classList.remove("show");
