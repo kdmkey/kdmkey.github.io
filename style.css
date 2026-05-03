@@ -39,6 +39,7 @@ main {
   height: auto;
   opacity: 0.15;
   filter: grayscale(100%);
+  pointer-events: none;
 }
 
 .home-item {
@@ -690,9 +691,9 @@ font-size:30px;
   position: absolute;
   width: 300px;
   height: auto;
-
   opacity: 0.15;
   filter: grayscale(100%);
+  pointer-events: none;
 }
 
 /* オーダーフォーム */
