@@ -25,6 +25,13 @@ html, body {
   margin: 0;
 }
 
+#bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* 背景にする */
+}
+
 main {
   flex: 1;
   display: flex;
