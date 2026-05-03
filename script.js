@@ -228,16 +228,20 @@ document.addEventListener("DOMContentLoaded", function () {
   let x = 100;
   let y = 100;
 
-  // スマホ基準速度（これを基準にする）
   let vx = 1.5;
   let vy = 1;
 
-  // PCだけ少し速くする倍率
-  const isMobile = window.innerWidth <= 768;
-  const speedMultiplier = isMobile ? 1 : 1.6;
+  const isPC = window.innerWidth > 768;
 
-  vx *= speedMultiplier;
-  vy *= speedMultiplier;
+  let canShake = true;
+
+  function shake() {
+    document.body.classList.add("shake");
+
+    setTimeout(() => {
+      document.body.classList.remove("shake");
+    }, isPC ? 200 : 300);
+  }
 
   function moveBall() {
 
@@ -252,7 +256,25 @@ document.addEventListener("DOMContentLoaded", function () {
     y += vy;
 
     if (x <= 0 || x + w >= width) vx *= -1;
-    if (y <= 0 || y + h >= height) vy *= -1;
+
+    if (y <= 0) {
+      vy *= -1;
+    }
+
+    if (y + h >= height) {
+
+      if (canShake) {
+        shake();
+        canShake = false;
+
+        setTimeout(() => {
+          canShake = true;
+        }, isPC ? 150 : 300);
+      }
+
+      vy *= -1;
+      y = height - h;
+    }
 
     ball.style.transform = `translate(${x}px, ${y}px)`;
 
