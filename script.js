@@ -228,10 +228,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let x = 100;
   let y = 100;
 
-  let vx = 1.5;
-  let vy = 1;
-
   const isPC = window.innerWidth > 768;
+  const speed = isPC ? 1.6 : 1;
+
+  let vx = 1.5 * speed;
+  let vy = 1 * speed;
 
   let canShake = true;
 
