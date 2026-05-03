@@ -377,39 +377,21 @@ width:100%;
 height:auto;
 display:block;
 }
-/* アーカイブ背景グラデ */
+/* アーカイブ背景 */
 body.archive{
   background-color: #ffffff;
 
   background-image:
-    linear-gradient(#ddd 1px, transparent 1px),
-    linear-gradient(90deg, #ddd 1px, transparent 1px),
-    linear-gradient(#bbb 2px, transparent 2px),
-    linear-gradient(90deg, #bbb 2px, transparent 2px);
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,0.08) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0,0,0,0.08) 2px, transparent 2px);
 
   background-size:
     20px 20px,
     20px 20px,
     100px 100px,
     100px 100px;
-}
-
-@keyframes bgChange{
-  0%{
-    background: rgb(255, 255, 240); /* 超うすい黄色 */
-  }
-  25%{
-    background: rgb(245, 255, 245); /* ほぼ白の緑 */
-  }
-  50%{
-    background: rgb(240, 250, 255); /* うすい水色寄り */
-  }
-  75%{
-    background: rgb(245, 240, 255); /* うすい紫 */
-  }
-  100%{
-    background: rgb(255, 255, 240); /* 最初に戻す */
-  }
 }
 
 /* 説明文 */
