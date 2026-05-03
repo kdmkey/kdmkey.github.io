@@ -379,7 +379,19 @@ display:block;
 }
 /* アーカイブ背景グラデ */
 body.archive{
-  animation: bgChange 20s linear infinite;
+  background-color: #ffffff;
+
+  background-image:
+    linear-gradient(#ddd 1px, transparent 1px),
+    linear-gradient(90deg, #ddd 1px, transparent 1px),
+    linear-gradient(#bbb 2px, transparent 2px),
+    linear-gradient(90deg, #bbb 2px, transparent 2px);
+
+  background-size:
+    20px 20px,
+    20px 20px,
+    100px 100px,
+    100px 100px;
 }
 
 @keyframes bgChange{
