@@ -23,13 +23,7 @@ transition: background 0.3s ease;
 html, body {
   height: 100%;
   margin: 0;
-}
-
-#bg{
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1; /* 背景にする */
+  overflow: hidden;
 }
 
 main {
@@ -38,6 +32,14 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+}
+
+#ball {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  opacity: 0.15;
+  filter: grayscale(100%);
 }
 
 .home-item {
@@ -683,6 +685,15 @@ font-size:30px;
   width: 90%;
   height: 100px;
   margin: 50px auto;
+}
+
+#ball {
+  position: absolute;
+  width: 300px;
+  height: auto;
+
+  opacity: 0.15;
+  filter: grayscale(100%);
 }
 
 /* オーダーフォーム */
