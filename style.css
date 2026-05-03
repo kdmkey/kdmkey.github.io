@@ -377,6 +377,22 @@ width:100%;
 height:auto;
 display:block;
 }
+/* アーカイブ枠線 */
+.img-box1{
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 6px;
+}
+
+.img-box2{
+  border: 2px solid rgba(255,120,0,0.2);
+  padding: 6px;
+}
+
+.img-box3{
+  border: 2px solid rgba(120,0,255,0.2);
+  padding: 6px;
+}
+
 /* アーカイブ背景 */
 body.archive{
   background-color: #ffffff;
