@@ -250,7 +250,7 @@ body.about{
   background-image: url("images/ABOUT.png");
   background-repeat: repeat;
   background-size: 150px; /* 調整ポイント */
-  background-color:#faf8f5;
+  background-color:#ffffff;
 }
 
 .about-content{
@@ -282,7 +282,7 @@ body.about{
 }
 
 body#orderPage{
-  background-color:#faf8f5;
+  background-color:#ffffff;
   background-image:
     radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
     radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px);
@@ -397,7 +397,7 @@ display:block;
 
 /* アーカイブ背景 */
 body.archive{
-  background-color: #faf8f5;
+  background-color: #ffffff;
 }
 
 /* 説明文 */
@@ -519,7 +519,7 @@ color:white;
 }
 
 .contact-page{
-  background-color:#faf8f5;
+  background-color:#ffffff;
 }
 
 .contact-info{
