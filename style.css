@@ -175,6 +175,11 @@ transform:translateY(-9px) rotate(-45deg);
 }
 
 /* メニュー表示 */
+
+.menu{
+  background: #f0f0f0;
+}
+
 .menu.active{
 right:0;
 }
@@ -191,10 +196,9 @@ margin:25px 0;
 }
 
 .menu a{
-color:rgb(0,0,0);
+color:rgb(0, 0, 0);
 text-decoration:none;
-font-size:35px;
-font-weight: 1px;
+font-size:30px;
 letter-spacing:0px;
 font-family: "special-gothic", sans-serif;
 }
@@ -673,7 +677,7 @@ right:0;
 }
 
 .menu a{
-font-size:30px;
+font-size:25px;
 }
 
 #canvas{
