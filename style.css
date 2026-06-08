@@ -581,6 +581,14 @@ color:white;
   height:18px;
 }
 
+.contact-message{
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  text-align: center;
+}
+
 /* フッター */
 
 footer{
