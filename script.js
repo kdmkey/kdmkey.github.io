@@ -285,3 +285,35 @@ document.addEventListener("DOMContentLoaded", function () {
   moveBall();
 
 });
+
+function updateFukuokaClock() {
+  const now = new Date();
+
+  const options = {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  };
+
+  const parts = new Intl.DateTimeFormat('en-US', options)
+    .formatToParts(now);
+
+  const get = type =>
+    parts.find(p => p.type === type)?.value;
+
+  const date =
+    `${get('month')}/${get('day')}/${get('year')}`;
+
+  const time =
+    `${get('hour')}:${get('minute')}${get('dayPeriod').toLowerCase()}`;
+
+  document.getElementById('fukuoka-clock').textContent =
+    `${date} ${time} FUK`;
+}
+
+updateFukuokaClock();
+setInterval(updateFukuokaClock, 1000);

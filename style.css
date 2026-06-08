@@ -203,6 +203,18 @@ letter-spacing:0px;
 font-family: "special-gothic", sans-serif;
 }
 
+#fukuoka-clock{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: "special-gothic", sans-serif;
+  white-space: nowrap;
+}
+
 #bg{
   position: fixed;
   inset: 0;
