@@ -345,12 +345,22 @@ body.about{
   margin-bottom:30px;
 }
 
+.about-content .english{
+  font-family: "martian-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 120, "wght" 400;
+  font-size:11px;
+  line-height:1.6;
+  margin-bottom:30px;
+}
+
 .about-content .info{
+  font-family: "martian-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 120, "wght" 400;
   margin-top:40px;
 }
 
 .about-content .info p{
-  font-size:14px;
+  font-size:11px;
   margin-bottom:5px;
 }
 
