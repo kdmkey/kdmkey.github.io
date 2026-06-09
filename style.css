@@ -82,11 +82,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 35px;
+  gap: 25px;
 }
 
 .home-links a {
-  font-family: "special-gothic", sans-serif;
+  font-family: "tosh-a", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
   text-decoration: none;
   font-size: clamp(35px, 6vw, 50px);
   color: #000;
