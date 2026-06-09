@@ -796,6 +796,7 @@ color:white;
   }
 
 }
+
 /* フッター */
 
 footer{
@@ -850,6 +851,7 @@ footer{
 .copyright{
   font-size:12px;
   color:#666;
+  padding-bottom:30px;
 }
 
 /* 〜〜〜〜〜〜〜〜〜〜スマホ〜〜〜〜〜〜〜〜〜〜 */
