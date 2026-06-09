@@ -86,9 +86,8 @@ main {
 }
 
 .home-links a {
-  font-family: "tosh-a", sans-serif;
-  font-weight: 1000;
-  font-style: normal;
+  font-family: "martian-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 120, "wght" 400;
   text-decoration: none;
   font-size: clamp(35px, 6vw, 50px);
   color: #000;
