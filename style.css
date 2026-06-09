@@ -702,6 +702,100 @@ color:white;
   text-align: center;
 }
 
+/* プライバシーポリシー */
+.privacy-page{
+  background:#fff;
+  color:#000;
+}
+
+.privacy-container{
+  width:min(90%, 720px);
+  margin:140px auto 120px;
+  font-family:"special-gothic", sans-serif;
+  font-weight:300;
+}
+
+.privacy-container h1{
+  font-size:38px;
+  font-weight:400;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:60px;
+}
+
+.privacy-container h2{
+  font-size:15px;
+  font-weight:400;
+  letter-spacing:1px;
+  margin-top:55px;
+  margin-bottom:18px;
+}
+
+.privacy-container p{
+  font-size:14px;
+  line-height:2.2;
+  letter-spacing:.03em;
+  margin-bottom:18px;
+}
+
+.privacy-container ul{
+  margin:20px 0;
+  padding-left:22px;
+}
+
+.privacy-container li{
+  font-size:14px;
+  line-height:2;
+  margin-bottom:6px;
+}
+
+.privacy-container a{
+  color:#000;
+  text-decoration:none;
+  border-bottom:1px solid #000;
+  transition:.3s;
+}
+
+.privacy-container a:hover{
+  opacity:.5;
+}
+
+.privacy-container h2:not(:first-of-type){
+  padding-top:10px;
+}
+
+.privacy-container p:last-child{
+  margin-top:60px;
+  font-size:12px;
+  opacity:.6;
+}
+/* Mobile */
+
+@media (max-width:768px){
+
+  .privacy-container{
+    width:88%;
+    margin:110px auto 80px;
+  }
+
+  .privacy-container h1{
+    font-size:26px;
+    letter-spacing:2px;
+    margin-bottom:45px;
+  }
+
+  .privacy-container h2{
+    font-size:14px;
+    margin-top:45px;
+  }
+
+  .privacy-container p,
+  .privacy-container li{
+    font-size:13px;
+    line-height:2;
+  }
+
+}
 /* フッター */
 
 footer{
