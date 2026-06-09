@@ -233,7 +233,7 @@ transform:translateY(-9px) rotate(-45deg);
 .menu a{
   color:rgb(0, 0, 0);
   text-decoration:none;
-  font-size:30px;
+  font-size:20px;
   letter-spacing:0px;
   font-family: "martian-mono-variable", sans-serif;
   font-variation-settings: "wdth" 120, "wght" 400;
@@ -634,8 +634,10 @@ color:white;
 }
 
 .contact-message{
+  font-family: "martian-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 120, "wght" 400;
   margin-top: 40px;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.8;
   color: #000000;
   text-align: center;
@@ -725,7 +727,7 @@ right:0;
 }
 
 .menu a{
-font-size:25px;
+font-size:17px;
 }
 
 #canvas{
