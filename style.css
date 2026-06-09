@@ -232,7 +232,8 @@ transform:translateY(-9px) rotate(-45deg);
   text-decoration:none;
   font-size:30px;
   letter-spacing:0px;
-  font-family:"special-gothic", sans-serif;
+  font-family: "martian-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 120, "wght" 400;
 }
 #fukuoka-clock{
   position: absolute;
