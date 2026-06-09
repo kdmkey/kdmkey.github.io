@@ -82,7 +82,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 35px;
 }
 
 .home-links a {
@@ -258,6 +258,7 @@ transform:translateY(-9px) rotate(-45deg);
   color: #000;
   text-decoration: none;
   position: relative;
+  margin-top: -26px;
 }
 
 .home-links a.sub-heading::after{
