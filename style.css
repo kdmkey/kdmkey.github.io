@@ -28,9 +28,10 @@ html, body {
 main {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -300px;
+  margin-top: 50px;
 }
 
 #ball {
@@ -279,6 +280,34 @@ transform:translateY(-9px) rotate(-45deg);
 
 .home-links a.sub-heading:hover::after{
   width: 100%;
+}
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:15px;
+
+  width:min(90vw, 500px);
+  margin:30px auto 0;
+}
+
+.photo-grid a{
+  display:block;
+}
+
+.photo-grid img{
+  width:100%;
+  display:block;
+
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+
+  transition:0.3s ease;
+}
+
+.photo-grid img:hover{
+  opacity:0.8;
+  transform:scale(1.02);
 }
 
 /* body */
