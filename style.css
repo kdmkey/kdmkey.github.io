@@ -30,7 +30,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: -200px;
 }
 
 #ball {
@@ -78,18 +78,21 @@ main {
   transition: 0.3s;
 }
 
-.home-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+.home-links{
+  display:grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 80px;
+  row-gap: 25px;
+  justify-content:center;
+  align-items:center;
+  justify-items:start;
 }
 
-.home-links a {
+.home-links a{
   font-family: "martian-mono-variable", sans-serif;
   font-variation-settings: "wdth" 120, "wght" 400;
   text-decoration: none;
-  font-size: clamp(35px, 6vw, 50px);
+  font-size: clamp(28px, 5vw, 42px);
   color: #000;
   letter-spacing: 0px;
   transition: 0.3s;
