@@ -369,9 +369,20 @@ overflow-x: hidden;
 /* ABOUT */
 
 body.about{
-  background-image: url("images/ABOUT.png");
+  background-image:
+    url("images/ABOUT.png"),
+    url("images/ABOUT.png");
+
   background-repeat: repeat;
-  background-size: 150px; /* 調整ポイント */
+
+  background-size:
+    150px 150px,
+    150px 150px;
+
+  background-position:
+    0 0,
+    75px 75px;
+
   background-color:#ffffff;
 }
 
