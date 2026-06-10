@@ -36,7 +36,7 @@ main {
 
 #ball {
   position: absolute;
-  width: 500px;
+  width: 50px;
   height: auto;
   pointer-events: none;
 }
@@ -918,7 +918,7 @@ font-size:17px;
 
 #ball {
   position: absolute;
-  width: 300px;
+  width: 50px;
   height: auto;
   pointer-events: none;
 }
