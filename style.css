@@ -124,6 +124,11 @@ font-weight:700;
 color:black;
 }
 
+.logo-link{
+  text-decoration: none;
+  color: inherit;
+}
+
 /* ハンバーガー */
 .hamburger{
 width:30px;
