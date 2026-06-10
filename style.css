@@ -386,6 +386,18 @@ body.about{
   background-color:#ffffff;
 }
 
+@media (min-width:769px){
+  body.about{
+    background-size:
+      220px 220px,
+      220px 220px;
+
+    background-position:
+      0 0,
+      110px 110px;
+  }
+}
+
 .about-content{
   max-width:800px;
   margin:80px auto;
