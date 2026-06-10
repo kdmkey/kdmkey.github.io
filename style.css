@@ -182,8 +182,24 @@ transform:translateY(-9px) rotate(-45deg);
 /* メニュー表示 */
 
 .menu{
-  background: #f0f0f0;
+  position:fixed;
+  top:0;
+  right:-250px;
+  width:250px;
+  height:100vh;
+
+  background:#f0f0f0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  transition:0.4s;
+  z-index:900;
 }
+
+
 
 .menu.active{
   right:0;
@@ -239,6 +255,14 @@ transform:translateY(-9px) rotate(-45deg);
   font-family: "martian-mono-variable", sans-serif;
   font-variation-settings: "wdth" 120, "wght" 400;
 }
+
+.menu-image{
+  display:block;
+  width:120px;      /* サイズ調整 */
+  height:auto;
+  margin:40px auto 15px;
+}
+
 #fukuoka-clock{
   position: absolute;
   bottom: 40px;
