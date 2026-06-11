@@ -898,9 +898,13 @@ footer{
   background: #000;
   color: #fff;
   text-decoration: none;
-  font-size: 7px;
-  letter-spacing: 1.2px;
-  padding: 4px 10px;
+
+  font-size: 6px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+  padding: 3px 8px;
+
   text-transform: uppercase;
 }
 
