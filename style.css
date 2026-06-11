@@ -31,7 +31,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 #ball {
@@ -82,8 +82,8 @@ main {
 .home-links{
   display:grid;
   grid-template-columns: repeat(2, auto);
-  column-gap: 80px;
-  row-gap: 25px;
+  column-gap:80px;
+  row-gap: 15px;
   justify-content:center;
   align-items:center;
   justify-items:start;
