@@ -102,6 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("load", function () {
 
   const canvas = document.getElementById("bg");
+
+  if (!canvas) return;
+
   const ctx = canvas.getContext("2d");
 
   let dots = [];
@@ -188,7 +191,6 @@ window.addEventListener("load", function () {
   window.addEventListener("orientationchange", resizeCanvas);
 
 });
-
 
 /* =========================
    MODAL
@@ -317,3 +319,4 @@ function updateFukuokaClock() {
 
 updateFukuokaClock();
 setInterval(updateFukuokaClock, 1000);
+

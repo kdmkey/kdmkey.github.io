@@ -780,9 +780,11 @@ color:white;
 }
 
 /* プライバシーポリシー */
-.privacy-page{
-  background:#fff;
-  color:#000;
+body.privacy-page{
+  background-color:#fff;
+  background-image:
+    radial-gradient(#000 1px, transparent 1px);
+  background-size:28px 28px;
 }
 
 .privacy-container{
@@ -812,6 +814,8 @@ color:white;
   letter-spacing:1px;
   margin-top:55px;
   margin-bottom:18px;
+  background:#fff;
+  padding:10px;
 }
 
 .privacy-container p{
@@ -819,11 +823,13 @@ color:white;
   line-height:2.2;
   letter-spacing:.03em;
   margin-bottom:18px;
+  background:#fff;
 }
 
 .privacy-container ul{
   margin:20px 0;
   padding-left:22px;
+  background:#fff;
 }
 
 .privacy-container li{
@@ -850,7 +856,7 @@ color:white;
 .privacy-container p:last-child{
   margin-top:60px;
   font-size:12px;
-  opacity:.6;
+  background:#fff;
 }
 /* Mobile */
 
