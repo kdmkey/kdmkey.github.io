@@ -684,21 +684,29 @@ color:white;
   font-weight: 600;
 }
 
-.close{
+.close {
   position: absolute;
   top: -12px;
   right: 12px;
 
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 50%;
   width: 30px;
   height: 30px;
+
+  background: transparent;
+  border: none;
+  padding: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
+
+  cursor: pointer;
+}
+.close img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
 }
 
 /* コンタクト */
