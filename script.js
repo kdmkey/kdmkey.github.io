@@ -210,14 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove("show");
   });
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.remove("show");
-    }
-  });
-
 });
-
 
 /* =========================
    BOUNCING SVG
