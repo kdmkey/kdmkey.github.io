@@ -97,12 +97,20 @@ main {
 
   .home-links{
     display:grid;
-    grid-template-columns: repeat(2, auto);
-    column-gap:80px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:40px;
     row-gap:15px;
-    justify-content:center;
-    align-items:center;
-    justify-items:start;
+    width:100%;
+  }
+
+  /* 左列 */
+  .home-links a:nth-child(odd){
+    justify-self:start;
+  }
+
+  /* 右列 */
+  .home-links a:nth-child(even){
+    justify-self:end;
   }
 
 }
