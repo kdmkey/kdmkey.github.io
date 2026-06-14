@@ -101,6 +101,8 @@ main {
     column-gap:20px;
     row-gap:15px;
     width:90%;
+    margin-top:-20px;
+
   }
 
   /* 左列 */
@@ -127,7 +129,7 @@ main {
 
 @media (min-width:769px){
   .home-links a{
-    font-size: 22px;
+    font-size: 14px;
   }
 }
 
