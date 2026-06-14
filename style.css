@@ -79,7 +79,7 @@ main {
 }
 
 .home-icon {
-  width: clamp(30px, 6vw, 40px);
+  width: clamp(20px, 4vw, 28px);
   height: auto;
   fill: black;
   transition: 0.3s;
