@@ -98,9 +98,9 @@ main {
   .home-links{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap:40px;
+    column-gap:20px;
     row-gap:15px;
-    width:100%;
+    width:90%;
   }
 
   /* 左列 */
