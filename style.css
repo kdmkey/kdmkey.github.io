@@ -34,12 +34,6 @@ main {
   margin-top: 70px;
 }
 
-@media (min-width:769px){
-  main{
-    margin-top: -70px;
-  }
-}
-
 #ball {
   position: absolute;
   width: 70px;
