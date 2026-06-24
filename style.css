@@ -584,7 +584,8 @@ color:#d7d7d7;
 
 @media (max-width: 768px) {
   .archive-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
 
