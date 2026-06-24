@@ -96,23 +96,12 @@ main {
 @media (max-width:768px){
 
   .home-links{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap:20px;
-    row-gap:15px;
-    width:90%;
-    margin-top:-20px;
-
-  }
-
-  /* 左列 */
-  .home-links a:nth-child(odd){
-    justify-self:start;
-  }
-
-  /* 右列 */
-  .home-links a:nth-child(even){
-    justify-self:end;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin-top: -20px;
   }
 
 }
