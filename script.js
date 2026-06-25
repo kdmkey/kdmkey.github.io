@@ -224,12 +224,24 @@ document.addEventListener("DOMContentLoaded", function () {
   let y = 100;
 
   const isPC = window.innerWidth > 768;
-  const speed = isPC ? 1.6 : 1;
+  const speed = isPC ? 1.2 : 0.7;
 
   let vx = 1.5 * speed;
   let vy = 1 * speed;
 
   let canShake = true;
+
+  // SVGサイズは最初に取得
+  let rect = ball.getBoundingClientRect();
+  let w = rect.width;
+  let h = rect.height;
+
+  // リサイズ時だけ再取得
+  window.addEventListener("resize", () => {
+    rect = ball.getBoundingClientRect();
+    w = rect.width;
+    h = rect.height;
+  });
 
   function shake() {
     document.body.classList.add("shake");
@@ -244,14 +256,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const width = window.innerWidth;
     const height = window.innerHeight;
 
-    const rect = ball.getBoundingClientRect();
-    const w = rect.width;
-    const h = rect.height;
-
     x += vx;
     y += vy;
 
-    if (x <= 0 || x + w >= width) vx *= -1;
+    if (x <= 0 || x + w >= width) {
+      vx *= -1;
+    }
 
     if (y <= 0) {
       vy *= -1;
@@ -281,23 +291,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+/* =========================
+   FUKUOKA CLOCK
+========================= */
+
+// フォーマッタは1回だけ生成
+const formatter = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'Asia/Tokyo',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: true
+});
+
 function updateFukuokaClock() {
-  const now = new Date();
 
-  const options = {
-    timeZone: 'Asia/Tokyo',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true
-  };
+  const parts = formatter.formatToParts(new Date());
 
-  const parts = new Intl.DateTimeFormat('en-US', options)
-    .formatToParts(now);
-
-  const get = type =>
+  const get = (type) =>
     parts.find(p => p.type === type)?.value;
 
   const date =
@@ -306,10 +320,12 @@ function updateFukuokaClock() {
   const time =
     `${get('hour')}:${get('minute')}${get('dayPeriod').toLowerCase()}`;
 
-  document.getElementById('fukuoka-clock').textContent =
-    `${date} ${time} FUK`;
+  const clock = document.getElementById('fukuoka-clock');
+
+  if (clock) {
+    clock.textContent = `${date} ${time} FUK`;
+  }
 }
 
 updateFukuokaClock();
 setInterval(updateFukuokaClock, 1000);
-
