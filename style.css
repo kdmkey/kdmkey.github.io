@@ -366,7 +366,7 @@ transform:translateY(-9px) rotate(-45deg);
 
 .photo-grid{
   display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns:repeat(1, 1fr);
   gap:15px;
 
   width:min(90vw, 500px);
