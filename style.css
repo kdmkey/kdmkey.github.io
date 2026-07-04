@@ -241,7 +241,7 @@ transform:translateY(-9px) rotate(-45deg);
 }
 
 .menu li{
-  margin:25px 0;
+  margin:40px 0;
 
   opacity:0;
   transform:translateX(20px);
