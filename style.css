@@ -656,44 +656,6 @@ background:black;
 color:white;
 }
 
-.modal{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background: rgb(255, 255, 255); 
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s;
-}
-
-.modal.show{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-content{
-  background: rgb(255, 255, 255);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  padding: 40px 20px 20px; /* ←スマホ用に少し狭める */
-  max-width: 400px;
-  width: 90%;
-  box-sizing: border-box;
-
-  position: relative;
-  font-size: 14px;
-  font-weight: 600;
-}
-
 @media (max-width: 768px) {
   .modal-content p {
     font-size: 12px;
