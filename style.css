@@ -42,7 +42,7 @@ main {
 
 #ball {
   position: absolute;
-  width: 70px;
+  width: 500px;
   height: auto;
   pointer-events: none;
 }
@@ -662,7 +662,7 @@ font-size:18px;
 
 #ball {
   position: absolute;
-  width: 50px;
+  width: 330px;
   height: auto;
   pointer-events: none;
 }
