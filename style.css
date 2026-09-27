@@ -4,9 +4,9 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-height:70px;
+height:50px;
 
-background:transparent;
+background:rgb(255, 255, 255);
 
 display:flex;
 justify-content:space-between;
@@ -141,7 +141,7 @@ background: rgba(229,229,229,0);
 /* ロゴ */
 .logo{
 font-family:"tosh-a", sans-serif;
-font-size:36px;
+font-size:26px;
 letter-spacing:1px;
 font-weight:700;
 color:black;
@@ -913,12 +913,12 @@ footer{
 @media (max-width:768px){
 
 .header{
-height:80px;
+height:30px;
 padding:0 20px;
 }
 
 .logo{
-font-size:24px;
+font-size:16px;
 }
 
 /* メニュー */
