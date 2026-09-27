@@ -504,8 +504,8 @@ body.about {
 /* コンタクト */
 .contact{
   max-width:600px;
-  margin:120px auto;
-  text-align:center;
+  margin:120px 0;
+  text-align:left;
 }
 
 .contact-page{
@@ -515,7 +515,7 @@ body.about {
 .contact-info{
   display:flex;
   flex-direction:column;
-  align-items:center; /* ←中央寄せはこっちでやる */
+  align-items:left; /* ←中央寄せはこっちでやる */
   gap:15px;
 }
 
