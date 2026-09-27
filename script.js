@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let y = 100;
 
   const isPC = window.innerWidth > 768;
-  const speed = isPC ? 2.0 : 1.15;
+  const speed = isPC ? 1.8 : 1.05;
 
   let vx = 1.5 * speed;
   let vy = 1 * speed;
