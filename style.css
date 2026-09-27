@@ -403,33 +403,37 @@ overflow-x: hidden;
 
 /* ABOUT */
 
-body.about{
-  background-image:
-    url("images/ABOUT.png"),
-    url("images/ABOUT.png");
+body.about {
+  background-color: #ffffff;
 
-  background-repeat: repeat;
+  background-image:
+    radial-gradient(circle, #ebebeb 1.1px, transparent 1.1px),
+    radial-gradient(circle, #ebebeb 1.1px, transparent 1.1px);
 
   background-size:
-    150px 150px,
-    150px 150px;
+    30px 30px,
+    30px 30px;
 
   background-position:
     0 0,
-    75px 75px;
-
-  background-color:#ffffff;
+    15px 15px;
 }
 
 @media (min-width:769px){
-  body.about{
+  body.about {
+    background-color: #ffffff;
+  
+    background-image:
+      radial-gradient(circle, #ebebeb 1.1px, transparent 1.1px),
+      radial-gradient(circle, #ebebeb 1.1px, transparent 1.1px);
+  
     background-size:
-      220px 220px,
-      220px 220px;
-
+      30px 30px,
+      30px 30px;
+  
     background-position:
       0 0,
-      110px 110px;
+      15px 15px;
   }
 }
 
@@ -522,7 +526,7 @@ body.about{
 
 /* 名前 */
 .contact-name{
-  font-size:20px;
+  font-size:16px;
   font-weight:600;
 }
 
