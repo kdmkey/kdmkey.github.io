@@ -683,7 +683,7 @@ font-size:35px;
 
 #ball {
   position: absolute;
-  width: 290px;
+  width: 295px;
   height: auto;
   pointer-events: none;
 }
