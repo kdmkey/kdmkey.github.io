@@ -335,15 +335,13 @@ color:black;
   left: 50%;
   transform: translateX(-50%);
   color: #000000;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 1px;
   font-family: "forma-djr-display", sans-serif;
   font-weight: 600;
   font-style: normal;
   white-space: nowrap;
 }
-
-
 
 #bg{
   position: fixed;
@@ -548,13 +546,13 @@ body.about {
 
 /* 名前 */
 .contact-name{
-  font-size:15px;
+  font-size:13px;
   font-weight:400;
 }
 
 /* リンク（アイコン＋文字） */
 .contact-item{
-  font-size:15px;
+  font-size:12px;
   color:#000;
   text-decoration:none;
   font-weight:400;
@@ -643,7 +641,7 @@ footer{
 }
 
 .copyright{
-  font-size:12px;
+  font-size:10px;
   color:#666;
   padding-bottom:30px;
 }
