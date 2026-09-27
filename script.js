@@ -345,7 +345,7 @@ function updateFukuokaClock() {
   const clock = document.getElementById('fukuoka-clock');
 
   if (clock) {
-    clock.textContent = `${date} ${time} FUK`;
+    clock.textContent = `${date} ${time} JPN`;
   }
 }
 
