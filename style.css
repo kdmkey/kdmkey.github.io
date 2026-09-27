@@ -192,6 +192,29 @@ color:black;
   transform:translateY(-7px) rotate(-45deg);
 }
 
+/* メニュー背景 */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  z-index: 899;
+}
+
+/* メニューを開いたとき */
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* メニュー */
 .menu{
   position:fixed;

@@ -15,35 +15,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* ===== ハンバーガー ===== */
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu");
-  const links = document.querySelectorAll(".menu a");
+/* ===== ハンバーガー ===== */
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+const overlay = document.querySelector(".menu-overlay");
+const links = document.querySelectorAll(".menu a");
 
-  if (hamburger && menu) {
+if (hamburger && menu) {
 
-    hamburger.addEventListener("click", function (e) {
-      e.stopPropagation();
-      hamburger.classList.toggle("active");
-      menu.classList.toggle("active");
-    });
+  hamburger.addEventListener("click", function (e) {
+    e.stopPropagation();
 
-    links.forEach(function (link) {
-      link.addEventListener("click", function () {
-        hamburger.classList.remove("active");
-        menu.classList.remove("active");
-      });
-    });
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
 
-    document.body.addEventListener("click", function () {
+    if (overlay) {
+      overlay.classList.toggle("active");
+    }
+  });
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function () {
       hamburger.classList.remove("active");
       menu.classList.remove("active");
-    });
 
-    menu.addEventListener("click", function (e) {
-      e.stopPropagation();
+      if (overlay) {
+        overlay.classList.remove("active");
+      }
+    });
+  });
+
+  document.body.addEventListener("click", function () {
+    hamburger.classList.remove("active");
+    menu.classList.remove("active");
+
+    if (overlay) {
+      overlay.classList.remove("active");
+    }
+  });
+
+  menu.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+
+  if (overlay) {
+    overlay.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
     });
   }
+}
 
   /* ===== フォームチェック ===== */
   const form = document.querySelector("form");
