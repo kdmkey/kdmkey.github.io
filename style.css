@@ -444,6 +444,7 @@ body.about{
   font-weight: 600;
   line-height:1.6;
   margin-bottom:30px;
+  text-align: left;
 }
 
 .about-content .english{
