@@ -532,52 +532,6 @@ color:#d7d7d7;
   display: inline-block;
 }
 
-/* アーカイブページ */
-
-.archive {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.archive h2 {
-  margin: 40px 0 20px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #ddd;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.archive-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.archive-item {
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.archive-item img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.archive-item:hover img {
-  transform: scale(1.03);
-}
-
-@media (max-width: 768px) {
-  .archive-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-}
-
 /* 説明文 */
 
 .explanation{
