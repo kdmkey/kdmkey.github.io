@@ -526,18 +526,18 @@ body.about {
 
 /* 名前 */
 .contact-name{
-  font-size:16px;
-  font-weight:600;
+  font-size:15px;
+  font-weight:400;
 }
 
 /* リンク（アイコン＋文字） */
 .contact-item{
-  font-size:16px;
+  font-size:15px;
   color:#000;
   text-decoration:none;
-  font-weight:600;
+  font-weight:400;
 
-  display:inline-flex; /* ←ここ重要 */
+  display:inline-flex; 
   align-items:center;
   gap:8px;
 
