@@ -132,7 +132,7 @@ window.addEventListener("load", function () {
   let dots = [];
 
   const colors = [
-    "rgba(255, 35, 35, 0.4)",
+    "rgba(0, 0, 0, 0.2)",
     "rgba(255,120,0,0.2)",
     "rgba(120,0,255,0.2)"
   ];
